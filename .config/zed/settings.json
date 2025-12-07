@@ -1,0 +1,16 @@
+{
+	"ui_font_family": "MonaspiceKr Nerd Font",
+	"buffer_font_family": "MonaspiceKr Nerd Font",
+	"disable_ai": true,
+	"lsp": {
+		"tinymist": {
+			"initialization_options": {
+				"preview": {
+					"background": {
+						"enabled": true
+					}
+				}
+			}
+		}
+	}
+}

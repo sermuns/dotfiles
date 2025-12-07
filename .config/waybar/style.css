@@ -1,0 +1,62 @@
+window {
+	background: none;
+	font-weight: 600;
+	font-family: "MonaspiceKr NFM";
+	font-size: 13px;
+	color: #99d1db;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	background-color: #1a1b26;
+	padding: 0.1rem;
+}
+
+.modules-right * {
+	margin: 0 0.5rem;
+}
+
+#workspaces button {
+	outline: inherit;
+	background: none;
+	color: #99d1db;
+}
+
+#workspaces button.active {
+	background-color: #373e44;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#workspaces,
+#clock,
+#bluetooth,
+#backlight,
+#network,
+#battery {
+	padding: 0 0.7rem;
+}
+
+#workspaces button:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover {
+	background-color: rgb(41, 42, 53);
+}
+
+#network.disconnected {
+	color: #e78284;
+}
+
+#battery {
+	color: #99d1db;
+}
+#battery.charging {
+	color: #a6d189;
+}
+#battery.warning:not(.charging) {
+	color: #e78284;
+}

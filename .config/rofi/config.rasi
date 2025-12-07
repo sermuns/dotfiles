@@ -1,0 +1,11 @@
+configuration {
+    font: "MonaspiceKr NFM 15";
+
+    kb-remove-to-eol: "";
+    kb-accept-entry: "Return,KP_Enter";
+
+    kb-row-up: "Alt+k,Control+k";
+    kb-row-down: "Alt+j,Control+j";
+}
+
+@theme "theme"

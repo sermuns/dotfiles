@@ -1,2 +1,45 @@
+[includeIf "hasconfig:remote.*.url:git@git.lysator.liu.se:*/**"]
+	path = .gitconfig-lys
+[includeIf "hasconfig:remote.*.url:*@aur.archlinux.org:*/**"]
+	path = .gitconfig-lys
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+	path = .gitconfig-github
+[includeIf "hasconfig:remote.*.url:git@gitlab.liu.se:*/**"]
+	path = .gitconfig-liu
+[includeIf "hasconfig:remote.*.url:git@ssh.dev.azure.com:*/**"]
+	path = .gitconfig-liu
+
 [init]
 	defaultBranch = main
+[pull]
+	; rebase = true
+	ff = yes
+[push]
+	autoSetupRemote = true
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[merge]
+	; ff = no
+	commit = no
+	conflictStyle = zdiff3
+[credential]
+	helper = libsecret
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

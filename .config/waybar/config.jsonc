@@ -1,0 +1,86 @@
+{
+  "reload_style_on_change": true,
+  "position": "top",
+
+  "modules-left": [
+    "niri/workspaces",
+    "hyprland/workspaces",
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "wireplumber",
+    "backlight",
+    "battery"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "",
+      "8": "[m]",
+      "9": "📻",
+    }
+  },
+
+
+
+  "bluetooth": {
+    "format": "󰂯 ({status})",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "󰂲",
+    "on-click": "foot bluetui",
+  },
+
+  "clock": {
+    "locale": "sv_SE.UTF-8",
+    "tooltip": false,
+    "format": "{:L%H:%M | %a %d %B}",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": " ",
+    "format-disconnected": "󰖪",
+    "interval": 5,
+    "on-click": "kitty -1 impala",
+    "tooltip": false,
+  },
+
+  "backlight": {
+    "format": "🌕 {percent}%",
+    "tooltip": false,
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔇 {volume}%",
+    "format-icons": ["🔈", "🔉", "🔊"],
+    "on-click": "foot wiremix"
+  },
+
+  "battery": {
+    "interval": 2,
+    "tooltip": false,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "🔋 {capacity}%",
+    "format-warning": "🪫 {capacity}%",
+    "format-critical": "❗ {capacity}%",
+    "format-charging": "🔌 {capacity}%",
+    "format-plugged": "🔌 {capacity}%",
+    "format-alt": "🔋 {time}",
+  },
+}

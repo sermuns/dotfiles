@@ -1,0 +1,20 @@
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = []
+
+[settings.npm]
+bun = true
+
+[tools]
+cargo-binstall = "latest"
+dive = "latest"
+usage = "latest"
+watchexec = "latest"
+# "ubi:pdfcpu/pdfcpu" = "latest"
+"cargo:penguin-app" = "latest"
+"ubi:Crosse/font-install" = { version = "latest", exe = "font-install-linux-amd64", rename_exe = "font-install" }
+"ubi:sharkdp/numbat" = "latest"
+"ubi:sermuns/bbk" = "latest"
+cosign = "latest"
+"aqua:TheZoraiz/ascii-image-converter" = "latest"
+"ubi:ifd3f/caligula" = "latest"
