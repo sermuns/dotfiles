@@ -20,9 +20,12 @@ return {
     },
     formatters_by_ft = {
       lua = { 'stylua', stop_after_first = true },
+      gdscript = { 'gdformat' },
       python = { 'ruff_format' },
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
+      typescript = { 'prettierd' },
       html = { 'prettierd' },
+      json = { 'prettierd' },
       scss = { 'prettierd', 'prettier', stop_after_first = true },
       typst = { 'typstyle' },
       markdown = { 'prettierd' },
