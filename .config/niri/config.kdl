@@ -422,6 +422,10 @@ binds {
     Mod+Shift+U repeat=false {
         spawn-sh "OUTPUT=$(niri msg --json focused-output); niri msg output $(echo $OUTPUT | jq -r .name) scale $([ $(echo $OUTPUT | jq .logical.scale) = 1.0 ] && echo 2.0 || echo 1.0)"
     }
+
+    Pause {
+        spawn "wayscriber" "--active"
+    }
 }
 cursor {
     hide-when-typing
