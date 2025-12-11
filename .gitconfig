@@ -30,7 +30,7 @@
 	helper = libsecret
 
 [core]
-    pager = delta
+    pager = ~/.cargo/bin/delta
 
 [interactive]
     diffFilter = delta --color-only
