@@ -96,6 +96,9 @@ binds {
     Mod+B {
         spawn "foot" "bluetui"
     }
+    Ctrl+Alt+W {
+        spawn "foot" "impala"
+    }
     Mod+A {
         spawn "foot" "wiremix"
     }
