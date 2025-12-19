@@ -36,7 +36,7 @@
     "format": "󰂯 ({status})",
     "format-on": "󰂯",
     "format-off": "󰂲",
-    "format-connected": "󰂱",
+    "format-connected": "󰂱 {device_alias}",
     "format-no-controller": "󰂲",
     "on-click": "foot bluetui",
   },
@@ -53,7 +53,7 @@
     "format-ethernet": " ",
     "format-disconnected": "󰖪",
     "interval": 5,
-    "on-click": "kitty -1 impala",
+    "on-click": "foot impala",
     "tooltip": false,
   },
 
