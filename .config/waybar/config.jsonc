@@ -38,7 +38,7 @@
     "format-off": "󰂲",
     "format-no-controller": "󰂲",
     "format-connected": "󰂱 {device_alias}",
-    "format-connected-battery": "󰂱 {device_alias} ({device_battery_percentage}% 󰥄) ",
+    "format-connected-battery": "󰂱 {device_alias} ({device_battery_percentage}% 󰥈) ",
     "on-click": "foot bluetui",
   },
 
