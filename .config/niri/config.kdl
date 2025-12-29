@@ -65,6 +65,16 @@ window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
+
+window-rule {
+    match title="mandelbrot-metaverse"
+    open-focused false
+}
+window-rule {
+    match title="snake-in-bevy"
+    open-focused false
+}
+
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
@@ -423,4 +433,5 @@ environment {
     QT_QPA_PLATFORM "wayland"
     _JAVA_AWT_WM_NONREPARENTING "1"
 }
+
 
