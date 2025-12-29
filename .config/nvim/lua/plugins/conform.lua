@@ -38,6 +38,7 @@ return {
       rust = { 'rustfmt' },
       css = { 'prettierd' },
       kdl = { 'kdlfmt' },
+      gdscript = { 'gdformat' },
     },
   },
 }
