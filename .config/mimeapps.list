@@ -15,6 +15,7 @@ image/webp=org.gnome.Loupe.desktop
 x-directory/normal=Thunar.desktop
 image/svg=floorp.desktop
 image/svg+xml=org.gnome.Loupe.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
