@@ -23,6 +23,8 @@ export GOBIN=~/.go/bin
 
 export COMPOSE_BAKE=true
 
+export CARGO_TARGET_DIR=$HOME/.cache/cargo
+
 export PATH="$HOME/.local/bin:$HOME/bin:$GOBIN:/usr/local/go/bin:~/.cargo/bin:~/.cargo/binstall:$PATH"
 
 if [ -d ~/.bashrc.d ]; then
