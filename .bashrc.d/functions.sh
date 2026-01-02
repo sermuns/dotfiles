@@ -115,3 +115,7 @@ function paste_from_stdin() {
         curl  -s -H 'Content-Type: application/json' --data-binary @- ${API_URL}/ | \
         jq -r '. | "'${API_URL}'\(.path)"'
 }
+
+function b() {
+	printf "%s %%" $(< /sys/class/power_supply/BAT0/capacity) | figlet
+}
