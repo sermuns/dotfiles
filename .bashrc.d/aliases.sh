@@ -53,7 +53,6 @@ alias gdu='echo "use dua i !"'
 alias dui='dua i'
 
 # alias ly='gitui -w ~ -d ~/.local/share/yadm/repo.git'
-alias t=tmux
 alias ffmpeg='ffmpeg -hide_banner'
 
 alias obs='env QT_QPA_PLATFORM=xcb obs'

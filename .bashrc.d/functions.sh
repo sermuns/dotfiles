@@ -119,3 +119,7 @@ function paste_from_stdin() {
 function b() {
 	printf "%s %%" $(< /sys/class/power_supply/BAT0/capacity) | figlet
 }
+
+function t() {
+	date +'%H : %M' | figlet
+}
