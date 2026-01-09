@@ -65,7 +65,6 @@ window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
-
 window-rule {
     match title="mandelbrot-metaverse"
     open-focused false
@@ -74,7 +73,6 @@ window-rule {
     match title="snake-in-bevy"
     open-focused false
 }
-
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
@@ -131,6 +129,9 @@ binds {
         spawn "brightnessctl" "--class=backlight" "set" "10%-"
     }
     XF86AudioPlay allow-when-locked=true {
+        spawn "playerctl" "play-pause"
+    }
+    XF86Tools allow-when-locked=true {
         spawn "playerctl" "play-pause"
     }
     XF86AudioNext allow-when-locked=true {
@@ -389,10 +390,10 @@ binds {
         switch-focus-between-floating-and-tiling
     }
     Print {
-        screenshot
+        screenshot show-pointer=false
     }
     Ctrl+Print {
-        screenshot-screen
+        screenshot-screen show-pointer=false
     }
     Alt+Print {
         screenshot-window
@@ -433,5 +434,4 @@ environment {
     QT_QPA_PLATFORM "wayland"
     _JAVA_AWT_WM_NONREPARENTING "1"
 }
-
 
