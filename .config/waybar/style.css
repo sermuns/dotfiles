@@ -2,7 +2,7 @@ window {
 	background: none;
 	font-weight: 600;
 	font-family: "MonaspiceKr NFM";
-	font-size: 13px;
+	font-size: 11px;
 	color: #99d1db;
 }
 
@@ -10,7 +10,6 @@ window {
 .modules-center,
 .modules-right {
 	background-color: #1a1b26;
-	padding: 0.1rem;
 }
 
 .modules-right * {
@@ -21,6 +20,7 @@ window {
 	outline: inherit;
 	background: none;
 	color: #99d1db;
+	padding: 0.1em 0.3em;
 }
 
 #workspaces button.active {
