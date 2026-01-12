@@ -61,3 +61,5 @@ alias curl='curl --progress-bar'
 alias ffmpeg='ffmpeg -loglevel warning -hide_banner -stats'
 
 alias act='. .venv/bin/activate'
+
+alias zathura='zathura --fork'
