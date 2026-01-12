@@ -47,6 +47,5 @@ vim.o.secure = true
 vim.filetype.add {
   extension = {
     html = 'html',
-    ers = 'rustscript',
   },
 }
