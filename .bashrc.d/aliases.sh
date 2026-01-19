@@ -63,3 +63,4 @@ alias ffmpeg='ffmpeg -loglevel warning -hide_banner -stats'
 alias act='. .venv/bin/activate'
 
 alias zathura='zathura --fork'
+alias pac='sudo pacman'
