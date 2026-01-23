@@ -1,0 +1,8 @@
+project_name: rustlings
+project_root: ~/Git/rustlings
+windows:
+  - rustlings:
+      layout: even-horizontal
+      panes:
+        - nvim exercises
+        - rustlings

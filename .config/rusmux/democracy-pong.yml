@@ -1,0 +1,5 @@
+project_name: democracy-pong
+project_root: ~/Git/elsie/democracy-pong
+windows:
+  - dx: dx serve
+  - nvim: fd -e rs -e css -X vim
