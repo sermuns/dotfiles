@@ -11,5 +11,8 @@ return {
     vim.keymap.set('n', '\\', function()
       vim.cmd.Neotree 'toggle'
     end)
+    vim.keymap.set('n', '±', function()
+      vim.cmd.Neotree 'reveal'
+    end)
   end,
 }
