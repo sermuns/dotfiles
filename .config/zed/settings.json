@@ -1,5 +1,7 @@
 {
-	"ui_font_family": "MonaspiceKr Nerd Font",
+	"theme": "Gruvbox Dark Hard",
+ "vim_mode": true,
+ "ui_font_family": "MonaspiceKr Nerd Font",
 	"buffer_font_family": "MonaspiceKr Nerd Font",
 	"disable_ai": true,
 	"lsp": {
