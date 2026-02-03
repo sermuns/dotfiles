@@ -37,6 +37,7 @@ alias tree='eza --tree'
 alias irc='ssh -t shipon.lysator.liu.se -- tmux -u a'
 
 alias gh='env -u GITHUB_TOKEN gh'
+alias release-plz='env -u GITHUB_TOKEN release-plz'
 
 alias human='numfmt --to=iec'
 
