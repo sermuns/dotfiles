@@ -1,9 +1,16 @@
 {
-	"theme": "Gruvbox Dark Hard",
+	"calls": {
+  "mute_on_join": true,
+  "share_on_join": true
+ },
+ "edit_predictions": {
+  "mode": "subtle"
+ },
+ "theme": "Gruvbox Dark Hard",
  "vim_mode": true,
  "ui_font_family": "MonaspiceKr Nerd Font",
 	"buffer_font_family": "MonaspiceKr Nerd Font",
-	"disable_ai": true,
+	"disable_ai": false,
 	"lsp": {
 		"tinymist": {
 			"initialization_options": {
