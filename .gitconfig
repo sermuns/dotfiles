@@ -8,6 +8,8 @@
 	path = .gitconfig-liu
 [includeIf "hasconfig:remote.*.url:git@ssh.dev.azure.com:*/**"]
 	path = .gitconfig-liu
+[includeIf "hasconfig:remote.*.url:git@gitlab.kalmarglobal.com:*/**"]
+	path = .gitconfig-kalmar
 
 [init]
 	defaultBranch = main
