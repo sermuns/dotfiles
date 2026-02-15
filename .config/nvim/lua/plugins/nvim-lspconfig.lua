@@ -144,6 +144,17 @@ return {
         filetypes = { 'toml' },
         root_dir = require('lspconfig.util').root_pattern('*.toml', '.git'),
       },
+
+      ['rust-analyzer'] = {
+        procMacro = {
+          ignored = {
+            leptos_macro = {
+              'component',
+              'server',
+            },
+          },
+        },
+      },
     }
 
     require('mason').setup()
