@@ -25,7 +25,7 @@ export COMPOSE_BAKE=true
 
 export CARGO_TARGET_DIR=$HOME/.cache/cargo
 
-export PATH="$HOME/.local/bin:$HOME/bin:$GOBIN:/usr/local/go/bin:~/.cargo/bin:~/.cargo/binstall:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$GOBIN:/usr/local/go/bin:~/.cargo/bin:~/.cargo/binstall:$PATH:$XDG_DATA_HOME/nvim/mason/bin"
 
 if [ -d ~/.bashrc.d ]; then
   for rc in ~/.bashrc.d/*; do
