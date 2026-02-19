@@ -1,0 +1,13 @@
+{
+    "git.openRepositoryInParentFolders": "always",
+    "keyboard.dispatch": "keyCode",
+    "editor.fontFamily": "'JetBrainsMono NF'",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.minimap.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.sideBar.location": "right",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "editor.fontSize": 15,
+    "workbench.colorTheme": "Solarized Light"
+}
