@@ -70,6 +70,10 @@ window-rule {
     open-focused false
 }
 window-rule {
+    match title="Kalmar"
+    open-focused false
+}
+window-rule {
     match title="snake-in-bevy"
     open-focused false
 }
