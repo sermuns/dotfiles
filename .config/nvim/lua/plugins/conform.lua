@@ -42,6 +42,7 @@ return {
       css = { 'prettierd' },
       kdl = { 'kdlfmt' },
       gdscript = { 'gdformat' },
+      svelte = { 'prettierd' },
     },
   },
 }
