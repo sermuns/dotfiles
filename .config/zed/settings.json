@@ -4,9 +4,10 @@
   "share_on_join": true
  },
  "edit_predictions": {
+  "provider": "copilot",
   "mode": "subtle"
  },
- "theme": "Tokyo Night Light",
+ "theme": "Catppuccin Frappé",
  "vim_mode": true,
  "ui_font_family": "MonaspiceKr Nerd Font",
 	"buffer_font_family": "MonaspiceKr Nerd Font",
