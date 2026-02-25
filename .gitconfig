@@ -2,6 +2,8 @@
 	path = .gitconfig-lys
 [includeIf "hasconfig:remote.*.url:*@aur.archlinux.org:*/**"]
 	path = .gitconfig-lys
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
+	path = .gitconfig-lys
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
 	path = .gitconfig-github
 [includeIf "hasconfig:remote.*.url:git@gitlab.liu.se:*/**"]
