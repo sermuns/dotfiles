@@ -6,8 +6,11 @@
     "git.autofetch": true,
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "workbench.sideBar.location": "right",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "editor.fontSize": 15,
-    "workbench.colorTheme": "Solarized Light"
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "svelte.enable-ts-plugin": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
