@@ -34,6 +34,7 @@ return {
       xml = { 'xmlformatter' },
       c = { 'clang-format' },
       cs = { 'clang-format' },
+      cpp = { 'clang-format' },
       -- toml = { 'taplo' },
       htmldjango = { 'djlint' },
       go = { 'gofmt' },
