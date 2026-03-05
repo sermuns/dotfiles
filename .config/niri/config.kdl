@@ -66,15 +66,11 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match title="mandelbrot-metaverse"
+    match title="oxigource"
     open-focused false
 }
 window-rule {
     match title="Kalmar"
-    open-focused false
-}
-window-rule {
-    match title="snake-in-bevy"
     open-focused false
 }
 binds {
