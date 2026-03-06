@@ -57,3 +57,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export DEVKITPRO=/opt/devkitpro
