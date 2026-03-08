@@ -1,5 +1,9 @@
-[ -f /etc/bashrc ] && source /etc/bashrc
-[ -f ~/.env ] && source ~/.env
+source_if() {
+  [ -f "$1" ] && source "$1"
+}
+source_if /etc/bashrc
+source_if /etc/profile.d/devkit-env.sh
+source_if ~/.env
 
 shopt -s extglob
 
@@ -33,7 +37,6 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 
-
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init bash)"
 fi
@@ -57,4 +60,3 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export DEVKITPRO=/opt/devkitpro
