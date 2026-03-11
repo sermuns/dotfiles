@@ -65,3 +65,4 @@ alias act='. .venv/bin/activate'
 
 alias zathura='zathura --fork'
 alias pac='sudo pacman'
+alias vim='nvim'
