@@ -6,6 +6,8 @@
 	path = .gitconfig-lys
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
 	path = .gitconfig-github
+[includeIf "hasconfig:remote.*.url:git@codeberg.org:*/**"]
+	path = .gitconfig-github
 [includeIf "hasconfig:remote.*.url:git@gitlab.liu.se:*/**"]
 	path = .gitconfig-liu
 [includeIf "hasconfig:remote.*.url:git@ssh.dev.azure.com:*/**"]
