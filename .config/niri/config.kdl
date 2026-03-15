@@ -410,13 +410,13 @@ binds {
     }
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P {
-        power-off-monitors
-    }
+    // Mod+Shift+P {
+    //     power-off-monitors
+    // }
     Mod+Shift+S {
         suspend
     }
-    Mod+P repeat=false {
+    Mod+Alt+P repeat=false {
         spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"
     }
     Mod+Shift+U repeat=false {
