@@ -43,3 +43,7 @@ function b() {
 function t() {
 	date +'%H : %M' | figlet
 }
+
+function ntfy() {
+	curl -d "$1" $NTFY
+}
