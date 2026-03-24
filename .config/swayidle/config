@@ -1,0 +1,3 @@
+timeout 200 hyprlock
+timeout 300 "niri msg action power-off-monitors"
+before-sleep hyprlock
