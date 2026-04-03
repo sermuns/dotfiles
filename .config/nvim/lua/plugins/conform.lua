@@ -17,6 +17,10 @@ return {
       -- taplo = {
       --   args = { 'format', '-o', 'indent_string=\t', '-' },
       -- },
+      maudfmt = {
+        command = '/home/sermuns/.cargo/bin/maudfmt',
+        args = { '-s' }, -- add any config you wish
+      },
     },
     formatters_by_ft = {
       lua = { 'stylua', stop_after_first = true },
@@ -39,7 +43,7 @@ return {
       htmldjango = { 'djlint' },
       go = { 'gofmt' },
       sh = { 'shfmt' },
-      rust = { 'rustfmt' },
+      rust = { 'rustfmt', 'maudfmt' },
       css = { 'prettierd' },
       kdl = { 'kdlfmt' },
       gdscript = { 'gdformat' },
