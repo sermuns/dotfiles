@@ -420,7 +420,7 @@ binds {
         spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"
     }
     Mod+Shift+U repeat=false {
-        spawn-sh "OUTPUT=$(niri msg --json focused-output); niri msg output $(echo $OUTPUT | jq -r .name) scale $([ $(echo $OUTPUT | jq .logical.scale) = 1.0 ] && echo 2.0 || echo 1.0)"
+        spawn-sh "OUTPUT=$(niri msg --json focused-output); niri msg output $(echo $OUTPUT | jq -r .name) scale $([ $(echo $OUTPUT | jq .logical.scale) = 1.0 ] && echo 1.5 || echo 1.0)"
     }
 
     Pause {
