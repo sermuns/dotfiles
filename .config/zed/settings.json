@@ -1,13 +1,21 @@
 {
-	"calls": {
+	"icon_theme": "Zed (Default)",
+ "calls": {
   "mute_on_join": true,
   "share_on_join": true
  },
  "edit_predictions": {
+  "copilot": {
+   "enable_next_edit_suggestions": false
+  },
   "provider": "copilot",
   "mode": "subtle"
  },
- "theme": "Catppuccin Frappé",
+ "theme": {
+  "mode": "system",
+  "light": "One Light",
+  "dark": "Catppuccin Frappé"
+ },
  "vim_mode": true,
  "ui_font_family": "MonaspiceKr Nerd Font",
 	"buffer_font_family": "MonaspiceKr Nerd Font",
