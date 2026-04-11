@@ -19,3 +19,4 @@ x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+video/mp4=mpv.desktop;
