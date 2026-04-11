@@ -106,8 +106,6 @@ return {
         },
       },
 
-      ts_ls = {},
-
       lua_ls = {
         settings = {
           Lua = {
