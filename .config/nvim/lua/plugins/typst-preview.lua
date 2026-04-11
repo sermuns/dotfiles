@@ -1,7 +1,6 @@
 return {
   'chomosuke/typst-preview.nvim',
-  lazy = false, -- or ft = 'typst'
-  version = '1.*',
+  lazy = false,
   opts = {
     -- invert_colors = 'auto',
     open_cmd = 'xdg-open %s &>/dev/null',
