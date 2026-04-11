@@ -10,11 +10,34 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     error('Error cloning lazy.nvim:\n' .. out)
   end
-end ---@diagnostic disable-next-line: undefined-field
-vim.opt.rtp:prepend(lazypath)
+end
+
+---@type vim.Option
+local rtp = vim.opt.rtp
+rtp:prepend(lazypath)
 
 require('lazy').setup({
   'tpope/vim-sleuth',
+
+  -- Here is a more advanced example where we pass configuration
+  -- options to `gitsigns.nvim`.
+  --
+  -- See `:help gitsigns` to understand what the configuration keys do
+  { -- Adds git related signs to the gutter, as well as utilities for managing changes
+    'lewis6991/gitsigns.nvim',
+    ---@module 'gitsigns'
+    ---@type Gitsigns.Config
+    ---@diagnostic disable-next-line: missing-fields
+    opts = {
+      signs = {
+        add = { text = '+' }, ---@diagnostic disable-line: missing-fields
+        change = { text = '~' }, ---@diagnostic disable-line: missing-fields
+        delete = { text = '_' }, ---@diagnostic disable-line: missing-fields
+        topdelete = { text = '‾' }, ---@diagnostic disable-line: missing-fields
+        changedelete = { text = '~' }, ---@diagnostic disable-line: missing-fields
+      },
+    },
+  },
 
   {
     'folke/lazydev.nvim',
@@ -35,6 +58,7 @@ require('lazy').setup({
     import = 'plugins',
   },
 }, {
+  rocks = { enabled = false },
   change_detection = { enabled = false },
   ui = {
     icons = vim.g.have_nerd_font and {} or {
