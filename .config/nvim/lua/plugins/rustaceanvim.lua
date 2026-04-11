@@ -1,6 +1,6 @@
 return {
   'mrcjkb/rustaceanvim',
-  -- version = '^7', -- Recommended
+  version = '^9',
   lazy = false, -- This plugin is already lazy
   config = function()
     vim.keymap.set('n', 'gD', function()
