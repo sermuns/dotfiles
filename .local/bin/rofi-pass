@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 PASSWORD_STORE_DIR="$HOME/.password-store"
 
-entry=$(find "$PASSWORD_STORE_DIR" -type f -name '*.gpg' \
+entry=$(fd . -e gpg "$PASSWORD_STORE_DIR" \
   | sed "s|$PASSWORD_STORE_DIR/||;s|\.gpg$||" \
   | rofi -dmenu -p "pass:")
 
