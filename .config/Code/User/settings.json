@@ -8,9 +8,21 @@
     "extensions.ignoreRecommendations": true,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "editor.fontSize": 15,
-    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.colorTheme": "Light 2026",
     "svelte.enable-ts-plugin": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
+    },
+    "qt-core.additionalQtPaths": [
+        {
+            "name": "Qt-5.15.18-linux-g++_from_PATH",
+            "path": "/usr/bin/qmake"
+        }
+    ],
+    "qt-qml.doNotAskForQmllsDownload": true,
+    "workbench.editorAssociations": {
+        "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.ui": "default",
+        "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+        "*.qrc": "qt-core.qrcEditor"
     }
 }
