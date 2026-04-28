@@ -1,5 +1,22 @@
 {
-	"icon_theme": {
+	"project_panel": {
+  "dock": "left"
+ },
+ "outline_panel": {
+  "dock": "left"
+ },
+ "collaboration_panel": {
+  "dock": "left"
+ },
+ "agent": {
+  "dock": "right",
+  "favorite_models": [],
+  "model_parameters": []
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "icon_theme": {
   "mode": "dark",
   "light": "Zed (Default)",
   "dark": "Zed (Default)"
@@ -17,8 +34,8 @@
  },
  "theme": {
   "mode": "dark",
-  "light": "One Light",
-  "dark": "Catppuccin Frappé"
+  "light": "Catppuccin Latte",
+  "dark": "Ayu Mirage"
  },
  "vim_mode": true,
  "ui_font_family": "MonaspiceKr Nerd Font",
