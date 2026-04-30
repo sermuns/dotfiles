@@ -18,6 +18,7 @@ return {
           ['rust-analyzer'] = {
             cargo = {
               features = 'all',
+              targetDir = '/home/sermuns/.cache/cargo/'
             },
           },
         },
