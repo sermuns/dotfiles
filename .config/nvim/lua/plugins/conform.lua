@@ -46,6 +46,7 @@ return {
       kdl = { 'kdlfmt' },
       gdscript = { 'gdformat' },
       svelte = { 'prettierd' },
+      nix = {'nixfmt'},
     },
   },
 }
