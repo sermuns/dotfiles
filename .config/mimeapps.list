@@ -16,8 +16,10 @@ x-directory/normal=Thunar.desktop
 image/svg=floorp.desktop
 image/svg+xml=org.gnome.Loupe.desktop
 x-scheme-handler/discord=vesktop.desktop
+application/x-remmina=org.remmina.Remmina-file.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 video/mp4=mpv.desktop;
 image/x-portable-pixmap=org.gnome.Loupe.desktop;
+application/x-remmina=org.remmina.Remmina-file.desktop;
