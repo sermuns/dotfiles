@@ -24,12 +24,12 @@ centercrop() {
 	magick $1 -gravity center -crop "%[fx:min(w,h)]x%[fx:min(w,h)]+0+0" +repage $2
 }
 
-monbr () {
+monbr() {
 	ddcutil setvcp 10 $1
 }
 
 fastfetch() {
-    command fastfetch --logo "$(command fastfetch --list-logos | awk -F'"' '{gsub(/[0-9()]/,"",$2); if($2!="") print $2}' | shuf -n1)" "$@"
+	command fastfetch --logo "$(command fastfetch --list-logos | awk -F'"' '{gsub(/[0-9()]/,"",$2); if($2!="") print $2}' | shuf -n1)" "$@"
 }
 
 opout() {
@@ -37,7 +37,7 @@ opout() {
 }
 
 function b() {
-	printf "%s %%" $(< /sys/class/power_supply/BAT0/capacity) | figlet
+	printf "%s %%" $(</sys/class/power_supply/BAT0/capacity) | figlet
 }
 
 function t() {
@@ -46,4 +46,23 @@ function t() {
 
 function ntfy() {
 	curl -d "$1" $NTFY
+}
+
+function record-webcam() {
+	if [ $# -lt 1 ]; then
+		echo "Usage: record-webcam <output>, should be '.mkv'"
+		return 1
+	fi
+
+	ffmpeg \
+		-f v4l2 \
+		-input_format mjpeg \
+		-video_size 1920x1080 \
+		-framerate 30 \
+		-i /dev/video0 \
+		-f pulse \
+		-i alsa_input.usb-Microsoft_Microsoft___LifeCam_Studio_TM_-02.pro-audio0 \
+		-c:v copy \
+		-c:a aac -b:a 128k \
+		"file:$1"
 }
