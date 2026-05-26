@@ -47,6 +47,7 @@ return {
       gdscript = { 'gdformat' },
       svelte = { 'prettierd' },
       nix = {'nixfmt'},
+      bib = {'tex-fmt'},
     },
   },
 }
