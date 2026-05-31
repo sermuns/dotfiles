@@ -76,6 +76,10 @@ window-rule {
     match title="Kalmar"
     open-focused false
 }
+window-rule {
+    match title="kratos - Moonlight"
+    open-on-output "HDMI-A-2"
+}
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
@@ -425,7 +429,6 @@ binds {
     Mod+Shift+U repeat=false {
         spawn-sh "OUTPUT=$(niri msg --json focused-output); niri msg output $(echo $OUTPUT | jq -r .name) scale $([ $(echo $OUTPUT | jq .logical.scale) = 1.0 ] && echo 1.5 || echo 1.0)"
     }
-
     Pause {
         spawn "wayscriber" "--active"
     }
