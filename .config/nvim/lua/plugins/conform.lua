@@ -21,6 +21,10 @@ return {
         command = '/home/sermuns/.cargo/bin/maudfmt',
         args = { '-s' },
       },
+      mbake = {
+        command = 'mbake',
+        args = { 'format', '--stdin' },
+      },
     },
     formatters_by_ft = {
       lua = { 'stylua' },
@@ -46,8 +50,9 @@ return {
       kdl = { 'kdlfmt' },
       gdscript = { 'gdformat' },
       svelte = { 'prettierd' },
-      nix = {'nixfmt'},
-      bib = {'tex-fmt'},
+      nix = { 'nixfmt' },
+      bib = { 'tex-fmt' },
+      make = { 'mbake' },
     },
   },
 }
