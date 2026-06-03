@@ -53,6 +53,7 @@ return {
       nix = { 'nixfmt' },
       bib = { 'tex-fmt' },
       make = { 'mbake' },
+      jsonc = { 'prettierd' },
     },
   },
 }
