@@ -18,6 +18,7 @@ image/svg+xml=org.gnome.Loupe.desktop
 x-scheme-handler/discord=vesktop.desktop
 application/x-remmina=org.remmina.Remmina-file.desktop
 x-scheme-handler/discord-492484203435393035=discord-492484203435393035.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
