@@ -48,7 +48,7 @@ return {
       rust = { 'rustfmt', 'maudfmt' },
       css = { 'prettierd' },
       kdl = { 'kdlfmt' },
-      gdscript = { 'gdformat' },
+      gdscript = { 'gdscript-formatter' },
       svelte = { 'prettierd' },
       nix = { 'nixfmt' },
       bib = { 'tex-fmt' },

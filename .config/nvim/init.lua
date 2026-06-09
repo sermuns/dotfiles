@@ -81,4 +81,5 @@ require('lazy').setup({
 
 if vim.uv.fs_stat(vim.fs.joinpath(cwd, 'project.godot')) and not vim.uv.fs_stat '/tmp/godot.pipe' then
   vim.fn.serverstart '/tmp/godot.pipe'
+  vim.lsp.enable 'gdscript'
 end
