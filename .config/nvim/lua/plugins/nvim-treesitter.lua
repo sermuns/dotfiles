@@ -1,6 +1,7 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
+  'neovim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
+  dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
   opts = {
     auto_install = true,
     highlight = { enable = true },
