@@ -6,9 +6,7 @@ rules = [
 	{ mime = "text/*", use = "edit" },
 	{ mime = "video/*", use = "play" },
 
-	# { mime = "application/json", use = "edit" },
-	{ name = "*.json", use = "edit" },
+	{ mime = "application/json", use = "edit" },
 
-	# Multiple openers for a single rule
-	{ name = "*.html", use = [ "open", "edit" ] },
+	{ mime = "text/html", use = [ "open", "edit" ] },
 ]
