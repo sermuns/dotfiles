@@ -4,7 +4,7 @@ require 'run-code'
 require 'autocmds'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
   local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
   if vim.v.shell_error ~= 0 then
@@ -19,65 +19,45 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   'tpope/vim-sleuth',
 
-  -- Here is a more advanced example where we pass configuration
-  -- options to `gitsigns.nvim`.
-  --
-  -- See `:help gitsigns` to understand what the configuration keys do
-  { -- Adds git related signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    ---@module 'gitsigns'
-    ---@type Gitsigns.Config
-    ---@diagnostic disable-next-line: missing-fields
-    opts = {
-      signs = {
-        add = { text = '+' }, ---@diagnostic disable-line: missing-fields
-        change = { text = '~' }, ---@diagnostic disable-line: missing-fields
-        delete = { text = '_' }, ---@diagnostic disable-line: missing-fields
-        topdelete = { text = '‾' }, ---@diagnostic disable-line: missing-fields
-        changedelete = { text = '~' }, ---@diagnostic disable-line: missing-fields
-      },
-    },
-  },
-
   {
     'folke/lazydev.nvim',
     ft = 'lua',
     opts = {
       library = {
-        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
-      },
-    },
+        { path = 'luvit-meta/library', words = { 'vim%.uv' } }
+      }
+    }
   },
 
   {
     'Bilal2453/luvit-meta',
-    lazy = true,
+    lazy = true
   },
 
+  { import = 'plugins' }
+},
   {
-    import = 'plugins',
-  },
-}, {
-  rocks = { enabled = false },
-  change_detection = { enabled = false },
-  ui = {
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
-  },
-})
+    rocks = { enabled = false },
+    change_detection = { enabled = false },
+    ui = {
+      icons = vim.g.have_nerd_font and {}
+        or {
+          cmd = '⌘',
+          config = '🛠',
+          event = '📅',
+          ft = '📂',
+          init = '⚙',
+          keys = '🗝',
+          plugin = '🔌',
+          runtime = '💻',
+          require = '🌙',
+          source = '📄',
+          start = '🚀',
+          task = '📌',
+          lazy = '💤 '
+        }
+    }
+  })
 
 if vim.uv.fs_stat(vim.fs.joinpath(cwd, 'project.godot')) and not vim.uv.fs_stat '/tmp/godot.pipe' then
   vim.fn.serverstart '/tmp/godot.pipe'
