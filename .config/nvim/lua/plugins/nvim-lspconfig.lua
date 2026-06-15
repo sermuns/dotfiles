@@ -4,21 +4,21 @@ return {
     {
       -- NOTE: Must be loaded before dependants
       'williamboman/mason.nvim',
-      config = true,
+      config = true
     },
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     {
       'j-hui/fidget.nvim',
-      opts = {},
+      opts = {}
     },
-    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp'
   },
-  config = function()
+  config = function ()
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
-      callback = function(event)
-        local map = function(keys, func, desc, mode)
+      callback = function (event)
+        local map = function (keys, func, desc, mode)
           mode = mode or 'n'
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
@@ -45,31 +45,32 @@ return {
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
             group = highlight_augroup,
-            callback = vim.lsp.buf.document_highlight,
+            callback = vim.lsp.buf.document_highlight
           })
 
           vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
             buffer = event.buf,
             group = highlight_augroup,
-            callback = vim.lsp.buf.clear_references,
+            callback = vim.lsp.buf.clear_references
           })
 
           vim.api.nvim_create_autocmd('LspDetach', {
             group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
-            callback = function(event2)
+            callback = function (event2)
               vim.lsp.buf.clear_references()
               vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
-            end,
+            end
           })
         end
 
         if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
           -- vim.lsp.inlay_hint.enable()
-          map('<leader>th', function()
+          map('<leader>th', function ()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-          end, '[T]oggle Inlay [H]ints')
+          end, '[T]oggle Inlay [H]ints'
+          )
         end
-      end,
+      end
     })
 
     if vim.g.have_nerd_font then
@@ -88,7 +89,7 @@ return {
 
       tinymist = {
         single_file_support = true,
-        root_dir = '-',
+        root_dir = '-'
       },
 
       clangd = {},
@@ -100,23 +101,23 @@ return {
           gopls = {
             analyses = {
               structtag = false,
-              composites = false,
-            },
-          },
-        },
+              composites = false
+            }
+          }
+        }
       },
 
       lua_ls = {
         settings = {
           Lua = {
             completion = {
-              callSnippet = 'Replace',
+              callSnippet = 'Replace'
             },
             diagnostics = {
-              disable = { 'missing-fields' },
-            },
-          },
-        },
+              disable = { 'missing-fields' }
+            }
+          }
+        }
       },
 
       yamlls = {
@@ -125,23 +126,23 @@ return {
             schemas = {
               ['https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/main/service-schema.json'] = '*.azure-pipelines.yml',
               ['https://squidfunk.github.io/mkdocs-material/schema.json'] = '*.mkdocs.yml',
-              ['https://json.schemastore.org/github-workflow'] = '.github/workflows/*.{yml,yaml}',
+              ['https://json.schemastore.org/github-workflow'] = '.github/workflows/*.{yml,yaml}'
             },
-            validate = true,
-          },
-        },
+            validate = true
+          }
+        }
       },
 
       ruff = {
         init_options = {
-          configuration = '~/.config/ruff.toml',
-        },
+          configuration = '~/.config/ruff.toml'
+        }
       },
 
       taplo = {
         filetypes = { 'toml' },
-        root_dir = require('lspconfig.util').root_pattern('*.toml', '.git'),
-      },
+        root_dir = require('lspconfig.util').root_pattern('*.toml', '.git')
+      }
     }
 
     require('mason').setup()
@@ -150,12 +151,14 @@ return {
       ensure_installed = {},
       automatic_installation = true,
       handlers = {
-        function(server_name)
+        function (server_name)
           local server = servers[server_name] or {}
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
           require('lspconfig')[server_name].setup(server)
-        end,
-      },
+        end
+      }
     }
-  end,
+
+    vim.lsp.config("typos_lsp", {})
+  end
 }
