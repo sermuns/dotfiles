@@ -20,8 +20,8 @@ vim.keymap.set('n', comment_keymap, function()
   vim.cmd.norm 'gcc'
 end)
 
-vim.keymap.set('n', '<A-h>', '<cmd>tabprevious<cr>', { desc = 'Prev Tab' })
-vim.keymap.set('n', '<A-l>', '<cmd>tabnext<cr>', { desc = 'Next Tab' })
+vim.keymap.set('n', '<A-h>', '<cmd>bp<cr>', { desc = 'Prev Buffer' })
+vim.keymap.set('n', '<A-l>', '<cmd>bn<cr>', { desc = 'Next Buffer' })
 
 -- Move selected lines
 vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
