@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -eq 0 ]; then
+	echo "Usage: ${0##*/} <YOUTUBE URL> or <VIDEO ID>"
+	exit 1
+fi
+
+input="$1"
+
+if [[ "$input" =~ youtube\.com|youtu\.be ]]; then
+	video_id="$(
+		echo "$input" |
+			grep -oP '(?<=v=)[^&]+' ||
+			echo "$input" | grep -oP '(?<=youtu\.be/)[^?&]+'
+	)"
+else
+	video_id="$input"
+fi
+
+if [ -z "${video_id:-}" ]; then
+	echo "Could not determine video ID"
+	exit 1
+fi
+
+browser="floorp"
+
+$browser --new-window "https://www.youtube.com/watch?v=$video_id"
+$browser --new-window "https://www.youtube.com/live_chat?is_popout=1&v=$video_id"
