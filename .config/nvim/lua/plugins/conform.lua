@@ -54,6 +54,7 @@ return {
       bib = { 'tex-fmt' },
       make = { 'mbake' },
       jsonc = { 'prettierd' },
+      svg = { 'xmlstarlet' },
     },
   },
 }
