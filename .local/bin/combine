@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -eoxu pipefail
+
+video=$(find . -maxdepth 1 -name "*.mp4" -print -quit)
+
+[[ -z "$video" ]] && echo "No MP4 found" && exit 1
+
+inputs=()
+args=()
+
+i=0
+for srt in Subs/*.srt; do
+  lang=$(basename "$srt" | sed -E 's/.*\.([a-z]{3})\.srt$/\1/')
+
+  inputs+=("-i" "$srt")
+
+  args+=("-map" "$((i + 1))")
+  args+=("-metadata:s:s:$i" "language=$lang")
+
+  ((i++)) || true
+done
+
+ffmpeg \
+  -i "$video" \
+  "${inputs[@]}" \
+  -map 0:v -map 0:a \
+  "${args[@]}" \
+  -c copy \
+  "${video%.mp4}.mkv"
