@@ -26,11 +26,8 @@ output "Samsung Electric Company SyncMaster H1AK500000" {
     mode "1920x1080@60.000"
 }
 output "Dell Inc. DELL E2209W W631F89P0JMI" {
-    mode "1920x1080@59.939"
+    scale 0.9
 }
-// output "Crestron Electronics, Inc. Crestron Unknown" {
-//     scale 1
-// }
 layout {
     background-color "hsl(0, 0%, 13%)"
     gaps 0
@@ -446,5 +443,10 @@ environment {
     GDK_BACKEND "wayland,x11"
     QT_QPA_PLATFORM "wayland"
     _JAVA_AWT_WM_NONREPARENTING "1"
+}
+gestures {
+    hot-corners {
+        off
+    }
 }
 
