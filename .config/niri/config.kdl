@@ -25,6 +25,9 @@ output "Samsung Electric Company Odyssey G50A HNMWB00460" {
 output "Samsung Electric Company SyncMaster H1AK500000" {
     mode "1920x1080@60.000"
 }
+output "Dell Inc. DELL E2209W W631F89P0JMI" {
+    mode "1920x1080@59.939"
+}
 // output "Crestron Electronics, Inc. Crestron Unknown" {
 //     scale 1
 // }
