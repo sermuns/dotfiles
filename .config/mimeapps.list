@@ -1,7 +1,7 @@
 [Default Applications]
-text/html=floorp.desktop
-x-scheme-handler/http=floorp.desktop
-x-scheme-handler/https=floorp.desktop
+text/html=userapp-Floorp-TH3SB3.desktop
+x-scheme-handler/http=userapp-Floorp-TH3SB3.desktop
+x-scheme-handler/https=userapp-Floorp-TH3SB3.desktop
 x-scheme-handler/about=floorp.desktop
 x-scheme-handler/unknown=floorp.desktop
 application/pdf=org.pwmt.zathura.desktop
@@ -19,9 +19,26 @@ x-scheme-handler/discord=vesktop.desktop
 application/x-remmina=org.remmina.Remmina-file.desktop
 x-scheme-handler/discord-492484203435393035=discord-492484203435393035.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+x-scheme-handler/chrome=userapp-Floorp-TH3SB3.desktop
+application/x-extension-htm=userapp-Floorp-TH3SB3.desktop
+application/x-extension-html=userapp-Floorp-TH3SB3.desktop
+application/x-extension-shtml=userapp-Floorp-TH3SB3.desktop
+application/xhtml+xml=userapp-Floorp-TH3SB3.desktop
+application/x-extension-xhtml=userapp-Floorp-TH3SB3.desktop
+application/x-extension-xht=userapp-Floorp-TH3SB3.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 video/mp4=mpv.desktop;
 image/x-portable-pixmap=org.gnome.Loupe.desktop;
 application/x-remmina=org.remmina.Remmina-file.desktop;
+x-scheme-handler/http=userapp-Floorp-TH3SB3.desktop;
+x-scheme-handler/https=userapp-Floorp-TH3SB3.desktop;
+x-scheme-handler/chrome=userapp-Floorp-TH3SB3.desktop;
+text/html=userapp-Floorp-TH3SB3.desktop;
+application/x-extension-htm=userapp-Floorp-TH3SB3.desktop;
+application/x-extension-html=userapp-Floorp-TH3SB3.desktop;
+application/x-extension-shtml=userapp-Floorp-TH3SB3.desktop;
+application/xhtml+xml=userapp-Floorp-TH3SB3.desktop;
+application/x-extension-xhtml=userapp-Floorp-TH3SB3.desktop;
+application/x-extension-xht=userapp-Floorp-TH3SB3.desktop;
