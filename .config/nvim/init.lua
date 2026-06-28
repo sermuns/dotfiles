@@ -88,10 +88,7 @@ vim.cmd('packadd! nohlsearch')
 vim.pack.add({
 	'https://github.com/folke/tokyonight.nvim',
 	'https://github.com/neovim/nvim-lspconfig',
-	{ src = 'https://github.com/nvim-mini/mini.completion', version = 'stable' },
-	{ src = 'https://github.com/nvim-mini/mini.statusline', version = 'stable' },
-	{ src = 'https://github.com/nvim-mini/mini.icons',      version = 'stable' },
-	{ src = 'https://github.com/nvim-mini/mini.pick',       version = 'stable' },
+	{ src = 'https://github.com/nvim-mini/mini.nvim', version = 'stable' },
 	'https://github.com/stevearc/quicker.nvim',
 	'https://github.com/lewis6991/gitsigns.nvim',
 	{
@@ -132,6 +129,17 @@ statusline.section_location = function()
 	return '%2l:%-2v'
 end
 
+local pick = require 'mini.pick'
+pick.setup {}
+vim.keymap.set('n', '<leader>sh', pick.builtin.help, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sf', pick.builtin.files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sg', pick.builtin.grep_live, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sr', pick.builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader><leader>', pick.builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+require('mini.notify').setup {}
+
+
 require('quicker').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
@@ -151,13 +159,5 @@ require('neoscroll').setup {
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 
-local pick = require 'mini.pick'
-pick.setup {}
-
-vim.keymap.set('n', '<leader>sh', pick.builtin.help, { desc = '[S]earch [H]elp' })
-vim.keymap.set('n', '<leader>sf', pick.builtin.files, { desc = '[S]earch [F]iles' })
-vim.keymap.set('n', '<leader>sg', pick.builtin.grep_live, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sr', pick.builtin.resume, { desc = '[S]earch [R]esume' })
-vim.keymap.set('n', '<leader><leader>', pick.builtin.buffers, { desc = '[ ] Find existing buffers' })
 
 vim.cmd.colorscheme 'tokyonight-night'
