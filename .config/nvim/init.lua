@@ -83,24 +83,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 	end,
 })
 
-vim.api.nvim_create_autocmd('PackChanged', {
-	callback = function(ev)
-		local name, kind = ev.data.spec.name, ev.data.kind
-		if name == 'telescope-fzf-native.nvim' and (kind == 'install' or kind == 'update') then
-			vim.system({ 'cmake', '-S.', '-Bbuild', '-DCMAKE_BUILD_TYPE=Release' }, { cwd = ev.data.path },
-				function(obj)
-					if obj.code ~= 0 then
-						vim.notify 'cmake --build failed for telescope-fzf-native.nvim'
-					else
-						vim.system(
-							{ 'cmake', '--build', 'build', '--config', 'Release', '--target',
-								'install' }, { cwd = ev.data.path })
-					end
-				end)
-		end
-	end,
-})
-
 vim.cmd('packadd! nohlsearch')
 
 vim.pack.add({
@@ -108,6 +90,8 @@ vim.pack.add({
 	'https://github.com/neovim/nvim-lspconfig',
 	{ src = 'https://github.com/nvim-mini/mini.completion', version = 'stable' },
 	{ src = 'https://github.com/nvim-mini/mini.statusline', version = 'stable' },
+	{ src = 'https://github.com/nvim-mini/mini.icons',      version = 'stable' },
+	{ src = 'https://github.com/nvim-mini/mini.pick',       version = 'stable' },
 	'https://github.com/stevearc/quicker.nvim',
 	'https://github.com/lewis6991/gitsigns.nvim',
 	{
@@ -116,14 +100,8 @@ vim.pack.add({
 	},
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/MunifTanjim/nui.nvim",
-	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/sphamba/smear-cursor.nvim",
 	"https://github.com/karb94/neoscroll.nvim",
-	{
-		src = 'https://github.com/nvim-telescope/telescope.nvim',
-		version = vim.version.range '0.2',
-	},
-	'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 	'https://github.com/folke/todo-comments.nvim',
 })
 
@@ -173,24 +151,13 @@ require('neoscroll').setup {
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 
-require('telescope').setup {
-	extensions = {
-		fzf = {}
-	}
-}
+local pick = require 'mini.pick'
+pick.setup {}
 
-require('telescope').load_extension('fzf')
-
-local builtin = require 'telescope.builtin'
-vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>sh', pick.builtin.help, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sf', pick.builtin.files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sg', pick.builtin.grep_live, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sr', pick.builtin.resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader><leader>', pick.builtin.buffers, { desc = '[ ] Find existing buffers' })
 
 vim.cmd.colorscheme 'tokyonight-night'

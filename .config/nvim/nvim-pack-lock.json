@@ -13,6 +13,16 @@
       "src": "https://github.com/nvim-mini/mini.completion",
       "version": "'stable'"
     },
+    "mini.icons": {
+      "rev": "e56797f90192d81f1fda02e662fc3e8e3d775027",
+      "src": "https://github.com/nvim-mini/mini.icons",
+      "version": "'stable'"
+    },
+    "mini.pick": {
+      "rev": "8c1f75f8ddd8c9f75d07ed2ab5718d2c3cb65a66",
+      "src": "https://github.com/nvim-mini/mini.pick",
+      "version": "'stable'"
+    },
     "mini.statusline": {
       "rev": "b5547f44560dae3ccd81f914256fa6f705837022",
       "src": "https://github.com/nvim-mini/mini.statusline",
@@ -34,10 +44,6 @@
     "nvim-lspconfig": {
       "rev": "3371bf298c1f56efc26771ee961f461176958fb5",
       "src": "https://github.com/neovim/nvim-lspconfig"
-    },
-    "nvim-web-devicons": {
-      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
-      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
