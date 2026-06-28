@@ -55,6 +55,7 @@ alias dui='dua i'
 
 # alias ly='gitui -w ~ -d ~/.local/share/yadm/repo.git'
 alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
 
 alias obs='env QT_QPA_PLATFORM=xcb obs'
 alias curl='curl --progress-bar'
