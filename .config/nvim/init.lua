@@ -44,6 +44,8 @@ vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]])
 
 vim.keymap.set('n', '<Esc>', vim.cmd.nohlsearch)
 
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
 	callback = function()
