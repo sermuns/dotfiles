@@ -4,6 +4,7 @@ vim.o.number = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.opt.showmode = false
 
 vim.o.cursorline = true
 vim.o.scrolloff = 10
@@ -104,18 +105,11 @@ vim.cmd('packadd! nohlsearch')
 
 vim.pack.add({
 	'https://github.com/folke/tokyonight.nvim',
-	-- Quickstart configs for LSP
 	'https://github.com/neovim/nvim-lspconfig',
-	-- Autocompletion
 	{ src = 'https://github.com/nvim-mini/mini.completion', version = 'stable' },
-	-- Enhanced quickfix/loclist
+	{ src = 'https://github.com/nvim-mini/mini.statusline', version = 'stable' },
 	'https://github.com/stevearc/quicker.nvim',
-	-- Git integration
 	'https://github.com/lewis6991/gitsigns.nvim',
-	-- {
-	-- 	src = 'https://github.com/mrcjkb/rustaceanvim',
-	-- 	version = vim.version.range('^9')
-	-- },
 	{
 		src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
 		version = vim.version.range('3')
@@ -152,6 +146,12 @@ vim.lsp.config('rust_analyzer', {
 })
 
 require('mini.completion').setup {}
+local statusline = require('mini.statusline')
+statusline.setup {}
+statusline.section_location = function()
+	return '%2l:%-2v'
+end
+
 require('quicker').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
@@ -164,8 +164,8 @@ require('smear_cursor').setup({
 })
 
 require('neoscroll').setup {
-	-- easing = 'cubic',
-	duration_multiplier = 0.1,
+	easing = 'cubic',
+	duration_multiplier = 0.3,
 	performance_mode = false,
 }
 
