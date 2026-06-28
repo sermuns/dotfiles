@@ -59,8 +59,6 @@ alias ffmpeg='ffmpeg -hide_banner'
 alias obs='env QT_QPA_PLATFORM=xcb obs'
 alias curl='curl --progress-bar'
 
-alias ffmpeg='ffmpeg -loglevel warning -hide_banner -stats'
-
 alias act='. .venv/bin/activate'
 
 alias zathura='zathura --fork'
