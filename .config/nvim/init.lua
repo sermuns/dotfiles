@@ -61,14 +61,41 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 
+vim.api.nvim_create_autocmd('BufReadPost', {
+	group = vim.api.nvim_create_augroup('last-known-pos', { clear = true }),
+	callback = function(args)
+		local valid_line = vim.fn.line [['"]] >= 1 and vim.fn.line [['"]] < vim.fn.line '$'
+		local not_commit = vim.b[args.buf].filetype ~= 'commit'
+
+		if valid_line and not_commit then
+			vim.cmd [[normal! g`"]]
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd('PackChanged', {
+	callback = function(ev)
+		local name, kind = ev.data.spec.name, ev.data.kind
+		if name == 'telescope-fzf-native.nvim' and (kind == 'install' or kind == 'update') then
+			vim.system({ 'cmake', '-S.', '-Bbuild', '-DCMAKE_BUILD_TYPE=Release' }, { cwd = ev.data.path },
+				function(obj)
+					if obj.code ~= 0 then
+						vim.notify 'cmake --build failed for telescope-fzf-native.nvim'
+					else
+						vim.system(
+							{ 'cmake', '--build', 'build', '--config', 'Release', '--target',
+								'install' }, { cwd = ev.data.path })
+					end
+				end)
+		end
+	end,
+})
 
 vim.cmd('packadd! nohlsearch')
 
 vim.pack.add({
 	-- Quickstart configs for LSP
 	'https://github.com/neovim/nvim-lspconfig',
-	-- Fuzzy picker
-	'https://github.com/ibhagwan/fzf-lua',
 	-- Autocompletion
 	{ src = 'https://github.com/nvim-mini/mini.completion', version = 'stable' },
 	-- Enhanced quickfix/loclist
@@ -88,11 +115,16 @@ vim.pack.add({
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/sphamba/smear-cursor.nvim",
 	"https://github.com/karb94/neoscroll.nvim",
+	{
+		src = 'https://github.com/nvim-telescope/telescope.nvim',
+		version = vim.version.range '0.2',
+	},
+	'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 })
 
 vim.lsp.enable 'lua_ls'
+vim.lsp.enable 'rustaceanvim'
 
-require('fzf-lua').setup { fzf_colors = true }
 require('mini.completion').setup {}
 require('quicker').setup {}
 require('gitsigns').setup {}
@@ -111,3 +143,17 @@ require('neoscroll').setup {
 }
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
+
+require('telescope').setup {
+	extensions = {
+		fzf = {}
+	}
+}
+
+require('telescope').load_extension('fzf')
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
