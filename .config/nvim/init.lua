@@ -37,7 +37,14 @@ vim.keymap.set('n', '<A-l>', vim.cmd.bnext)
 vim.keymap.set('n', '<A-q>', vim.cmd.close)
 
 -- reload config
-vim.keymap.set('n', '<F3>', vim.cmd.source)
+vim.keymap.set(
+	'n',
+	'<F3>',
+	function()
+		vim.cmd.source(vim.env.MYVIMRC)
+		vim.notify 'Nvim config reloaded'
+	end
+)
 
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 vim.keymap.set('n', '<S-M-f>', vim.lsp.buf.format)
@@ -121,6 +128,7 @@ vim.pack.add({
 		version = vim.version.range '0.2',
 	},
 	'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
+	'https://github.com/folke/todo-comments.nvim',
 })
 
 vim.lsp.enable {
@@ -144,6 +152,7 @@ vim.lsp.config('rust_analyzer', {
 require('mini.completion').setup {}
 require('quicker').setup {}
 require('gitsigns').setup {}
+require('todo-comments').setup {}
 
 require('smear_cursor').setup({
 	stiffness = 0.95,
