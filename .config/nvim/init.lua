@@ -36,12 +36,14 @@ vim.keymap.set('n', '<A-h>', vim.cmd.bprevious)
 vim.keymap.set('n', '<A-l>', vim.cmd.bnext)
 vim.keymap.set('n', '<A-q>', vim.cmd.close)
 
+-- reload config
 vim.keymap.set('n', '<F3>', vim.cmd.source)
 
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
-vim.keymap.set('n', 'gca', vim.lsp.buf.code_action)
 vim.keymap.set('n', '<S-M-f>', vim.lsp.buf.format)
+vim.keymap.set('n', 'gca', vim.lsp.buf.code_action)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
 vim.keymap.set('v', '<C-c>', 'gc', { remap = true })
 vim.keymap.set('n', '<C-c>', 'gcc', { remap = true })
@@ -101,10 +103,10 @@ vim.pack.add({
 	'https://github.com/stevearc/quicker.nvim',
 	-- Git integration
 	'https://github.com/lewis6991/gitsigns.nvim',
-	{
-		src = 'https://github.com/mrcjkb/rustaceanvim',
-		version = vim.version.range('^9')
-	},
+	-- {
+	-- 	src = 'https://github.com/mrcjkb/rustaceanvim',
+	-- 	version = vim.version.range('^9')
+	-- },
 	{
 		src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
 		version = vim.version.range('3')
@@ -121,7 +123,23 @@ vim.pack.add({
 	'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 })
 
-vim.lsp.enable 'lua_ls'
+vim.lsp.enable {
+	'lua_ls',
+	'rust_analyzer',
+}
+
+vim.lsp.config('rust_analyzer', {
+	cmd = vim.lsp.rpc.connect("127.0.0.1", 27631),
+	settings = {
+		["rust-analyzer"] = {
+			lspMux = {
+				version = "1",
+				method = "connect",
+				server = "rust-analyzer",
+			},
+		},
+	}
+})
 
 require('mini.completion').setup {}
 require('quicker').setup {}
@@ -135,9 +153,9 @@ require('smear_cursor').setup({
 })
 
 require('neoscroll').setup {
-	easing = 'cubic',
-	duration_multiplier = 0.2,
-	performance_mode = true,
+	-- easing = 'cubic',
+	duration_multiplier = 0.1,
+	performance_mode = false,
 }
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
