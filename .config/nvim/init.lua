@@ -55,9 +55,7 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
-	callback = function()
-		vim.hl.on_yank()
-	end,
+	callback = vim.hl.on_yank
 })
 
 
