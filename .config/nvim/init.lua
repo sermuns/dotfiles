@@ -130,6 +130,8 @@ vim.pack.add({
 vim.lsp.enable {
 	'lua_ls',
 	'rust_analyzer',
+	'yamlls',
+	'tombi',
 }
 
 vim.lsp.config('rust_analyzer', {
