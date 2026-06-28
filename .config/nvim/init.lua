@@ -14,6 +14,8 @@ vim.o.undofile = true
 vim.opt.listchars = { tab = '| ', trail = '·', nbsp = '␣' }
 vim.o.list = true
 
+vim.opt.tabstop = 3
+
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
@@ -81,11 +83,11 @@ vim.pack.add({
 		src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
 		version = vim.version.range('3')
 	},
-	-- dependencies
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/MunifTanjim/nui.nvim",
-	-- optional, but recommended
 	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/sphamba/smear-cursor.nvim",
+	"https://github.com/karb94/neoscroll.nvim",
 })
 
 vim.lsp.enable 'lua_ls'
@@ -94,5 +96,18 @@ require('fzf-lua').setup { fzf_colors = true }
 require('mini.completion').setup {}
 require('quicker').setup {}
 require('gitsigns').setup {}
+
+require('smear_cursor').setup({
+	stiffness = 0.95,
+	trailing_stiffness = 0.8,
+	distance_stop_animating = 0.1,
+	hide_target_hack = false,
+})
+
+require('neoscroll').setup {
+	easing = 'cubic',
+	duration_multiplier = 0.2,
+	performance_mode = true,
+}
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
