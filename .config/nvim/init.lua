@@ -92,6 +92,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 vim.cmd('packadd! nohlsearch')
 
 vim.pack.add({
+	'https://github.com/folke/tokyonight.nvim',
 	-- Quickstart configs for LSP
 	'https://github.com/neovim/nvim-lspconfig',
 	-- Autocompletion
@@ -121,7 +122,6 @@ vim.pack.add({
 })
 
 vim.lsp.enable 'lua_ls'
-vim.lsp.enable 'rustaceanvim'
 
 require('mini.completion').setup {}
 require('quicker').setup {}
@@ -161,3 +161,5 @@ vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iag
 vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+vim.cmd.colorscheme 'tokyonight-night'
