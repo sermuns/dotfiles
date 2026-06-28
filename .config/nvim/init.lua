@@ -7,6 +7,11 @@ vim.o.smartcase = true
 
 vim.o.cursorline = true
 vim.o.scrolloff = 10
+vim.o.linebreak = true
+
+vim.o.undofile = true
+
+vim.opt.listchars = { tab = '| ', trail = '·', nbsp = '␣' }
 vim.o.list = true
 
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
