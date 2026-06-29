@@ -101,6 +101,7 @@ vim.pack.add({
 	"https://github.com/karb94/neoscroll.nvim",
 	'https://github.com/folke/todo-comments.nvim',
 	'https://github.com/j-hui/fidget.nvim',
+	'https://github.com/chomosuke/typst-preview.nvim'
 })
 
 vim.lsp.enable {
@@ -108,6 +109,7 @@ vim.lsp.enable {
 	'rust_analyzer',
 	'yamlls',
 	'tombi',
+	'tinymist',
 }
 
 local tcp = vim.uv.new_tcp()
