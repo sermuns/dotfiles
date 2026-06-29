@@ -47,7 +47,7 @@ vim.keymap.set(
 
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 vim.keymap.set('n', '<S-M-f>', vim.lsp.buf.format)
-vim.keymap.set('n', 'H', vim.lsp.buf.code_action)
+vim.keymap.set({ 'n', 'v' }, 'H', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
@@ -100,6 +100,7 @@ vim.pack.add({
 	'https://github.com/chomosuke/typst-preview.nvim',
 	'https://github.com/brenoprata10/nvim-highlight-colors',
 	'https://github.com/nvim-tree/nvim-web-devicons',
+	'https://github.com/vxpm/ferris.nvim',
 })
 
 vim.lsp.enable {
@@ -109,14 +110,17 @@ vim.lsp.enable {
 	'tombi',
 	'tinymist',
 	'just',
+	'rumdl',
 }
+
+require('ferris').setup {}
 
 require('nvim-highlight-colors').setup({})
 
 require('fidget').setup {}
 
 require('mini.completion').setup {}
--- do file path completion 
+-- do file path completion
 vim.keymap.set("i", "<C-f>", "<C-x><C-f>", { remap = true })
 
 local statusline = require('mini.statusline')

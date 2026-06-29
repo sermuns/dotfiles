@@ -21,3 +21,5 @@ tcp:connect("127.0.0.1", 27631, function(err)
 	})
 end
 )
+
+vim.keymap.set('n', 'gD', require("ferris.methods.open_documentation"))
