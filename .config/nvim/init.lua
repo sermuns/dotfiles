@@ -97,8 +97,6 @@ vim.pack.add({
 	},
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/MunifTanjim/nui.nvim",
-	"https://github.com/sphamba/smear-cursor.nvim",
-	"https://github.com/karb94/neoscroll.nvim",
 	'https://github.com/folke/todo-comments.nvim',
 	'https://github.com/j-hui/fidget.nvim',
 	'https://github.com/chomosuke/typst-preview.nvim'
@@ -130,23 +128,27 @@ vim.keymap.set('n', '<leader>sg', pick.builtin.grep_live, { desc = '[S]earch by 
 vim.keymap.set('n', '<leader>sr', pick.builtin.resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader><leader>', pick.builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+local animate = require('mini.animate')
+animate.setup {
+	cursor = {
+		timing = animate.gen_timing.quadratic {
+			easing = 'in-out',
+			duration = 2,
+		}
+	},
+	scroll = {
+		timing = animate.gen_timing.quadratic {
+			easing = 'out',
+			duration = 5,
+		}
+	}
+}
+
 
 require('quicker').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
 
-require('smear_cursor').setup({
-	stiffness = 0.95,
-	trailing_stiffness = 0.8,
-	distance_stop_animating = 0.1,
-	hide_target_hack = false,
-})
-
-require('neoscroll').setup {
-	easing = 'cubic',
-	duration_multiplier = 0.3,
-	performance_mode = false,
-}
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 
