@@ -99,7 +99,8 @@ vim.pack.add({
 	"https://github.com/MunifTanjim/nui.nvim",
 	'https://github.com/folke/todo-comments.nvim',
 	'https://github.com/j-hui/fidget.nvim',
-	'https://github.com/chomosuke/typst-preview.nvim'
+	'https://github.com/chomosuke/typst-preview.nvim',
+	'https://github.com/brenoprata10/nvim-highlight-colors',
 })
 
 vim.lsp.enable {
@@ -110,6 +111,7 @@ vim.lsp.enable {
 	'tinymist',
 }
 
+require('nvim-highlight-colors').setup({})
 
 require('fidget').setup {}
 
