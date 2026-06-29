@@ -101,6 +101,7 @@ vim.pack.add({
 	'https://github.com/j-hui/fidget.nvim',
 	'https://github.com/chomosuke/typst-preview.nvim',
 	'https://github.com/brenoprata10/nvim-highlight-colors',
+	'https://github.com/nvim-tree/nvim-web-devicons',
 })
 
 vim.lsp.enable {
