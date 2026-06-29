@@ -100,6 +100,7 @@ vim.pack.add({
 	"https://github.com/sphamba/smear-cursor.nvim",
 	"https://github.com/karb94/neoscroll.nvim",
 	'https://github.com/folke/todo-comments.nvim',
+	'https://github.com/j-hui/fidget.nvim',
 })
 
 vim.lsp.enable {
@@ -109,18 +110,31 @@ vim.lsp.enable {
 	'tombi',
 }
 
-vim.lsp.config('rust_analyzer', {
-	cmd = vim.lsp.rpc.connect("127.0.0.1", 27631),
-	settings = {
-		["rust-analyzer"] = {
-			lspMux = {
-				version = "1",
-				method = "connect",
-				server = "rust-analyzer",
+local tcp = vim.uv.new_tcp()
+tcp:connect("127.0.0.1", 27631, function(err)
+	tcp:close()
+
+	if err then
+		-- lspmux is not responding
+		return
+	end
+
+	vim.lsp.config('rust_analyzer', {
+		cmd = vim.lsp.rpc.connect("127.0.0.1", 27631),
+		settings = {
+			["rust-analyzer"] = {
+				lspMux = {
+					version = "1",
+					method = "connect",
+					server = "rust-analyzer",
+				},
 			},
-		},
-	}
-})
+		}
+	})
+end
+)
+
+require('fidget').setup {}
 
 require('mini.completion').setup {}
 local statusline = require('mini.statusline')
@@ -136,8 +150,6 @@ vim.keymap.set('n', '<leader>sf', pick.builtin.files, { desc = '[S]earch [F]iles
 vim.keymap.set('n', '<leader>sg', pick.builtin.grep_live, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sr', pick.builtin.resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader><leader>', pick.builtin.buffers, { desc = '[ ] Find existing buffers' })
-
-require('mini.notify').setup {}
 
 
 require('quicker').setup {}
