@@ -110,6 +110,7 @@ vim.lsp.enable {
 	'yamlls',
 	'tombi',
 	'tinymist',
+	'just',
 }
 
 require('nvim-highlight-colors').setup({})
@@ -117,6 +118,9 @@ require('nvim-highlight-colors').setup({})
 require('fidget').setup {}
 
 require('mini.completion').setup {}
+-- do file path completion 
+vim.keymap.set("i", "<C-f>", "<C-x><C-f>", { remap = true })
+
 local statusline = require('mini.statusline')
 statusline.setup {}
 statusline.section_location = function()
@@ -142,7 +146,7 @@ animate.setup {
 	scroll = {
 		timing = animate.gen_timing.quadratic {
 			easing = 'out',
-			duration = 5,
+			duration = 2,
 		}
 	}
 }
