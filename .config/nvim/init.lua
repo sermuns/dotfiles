@@ -49,7 +49,7 @@ vim.keymap.set(
 
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 vim.keymap.set('n', '<S-M-f>', vim.lsp.buf.format)
-vim.keymap.set('n', 'gca', vim.lsp.buf.code_action)
+vim.keymap.set('n', 'H', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
