@@ -108,7 +108,6 @@ vim.lsp.enable {
 	'rust_analyzer',
 	'yamlls',
 	'tombi',
-	'tinymist',
 	'just',
 	'rumdl',
 }
