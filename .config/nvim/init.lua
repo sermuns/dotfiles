@@ -105,11 +105,14 @@ vim.pack.add({
 
 vim.lsp.enable {
 	'lua_ls',
-	'rust_analyzer',
 	'yamlls',
 	'tombi',
 	'just',
 	'rumdl',
+	'cssls',
+	'rust_analyzer',
+	'basedpyright',
+	'ruff',
 }
 
 require('ferris').setup {}
@@ -157,7 +160,7 @@ require('quicker').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
 
-require('meread').setup {}
+-- require('meread').setup {}
 
 
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
