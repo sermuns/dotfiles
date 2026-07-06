@@ -103,7 +103,7 @@ binds {
         spawn "floorp"
     }
     Ctrl+Alt+E {
-        spawn "thunar"
+        spawn "nautilus"
     }
     Mod+M {
         spawn "wlogout"
