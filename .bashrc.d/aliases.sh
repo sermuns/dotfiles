@@ -28,7 +28,7 @@ alias npm='pnpm'
 
 alias pip='uv pip'
 
-alias ls='eza --icons --hyperlink'
+alias ls='eza --icons --hyperlink auto'
 alias l='ls -hF'
 alias la='ls -a'
 alias lla='ls -la'
