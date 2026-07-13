@@ -101,6 +101,14 @@ vim.pack.add({
 	'https://github.com/brenoprata10/nvim-highlight-colors',
 	'https://github.com/nvim-tree/nvim-web-devicons',
 	'https://github.com/vxpm/ferris.nvim',
+	{
+		src = 'https://github.com/sermuns/MEREAD',
+		version = vim.version.range('1')
+	}
+})
+
+vim.lsp.config('html', {
+	filetypes = { 'html', 'htmldjango' }
 })
 
 vim.lsp.enable {
@@ -113,6 +121,8 @@ vim.lsp.enable {
 	'rust_analyzer',
 	'basedpyright',
 	'ruff',
+	'jinja_lsp',
+	'html',
 }
 
 require('ferris').setup {}
@@ -161,8 +171,6 @@ require('gitsigns').setup {}
 require('todo-comments').setup {}
 
 
-
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
-
 
 vim.cmd.colorscheme 'tokyonight-night'
