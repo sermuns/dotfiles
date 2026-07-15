@@ -24,8 +24,6 @@ alias mpvnv='mpv --no-video'
 
 alias sl='sl -ade'
 
-alias npm='pnpm'
-
 alias pip='uv pip'
 
 alias ls='eza --icons --hyperlink auto'
