@@ -39,7 +39,7 @@
     pager = ~/.cargo/bin/delta
 
 [interactive]
-    diffFilter = delta --color-only
+    diffFilter = ~/.cargo/bin/delta --color-only
 
 [delta]
     navigate = true  # use n and N to move between diff sections
