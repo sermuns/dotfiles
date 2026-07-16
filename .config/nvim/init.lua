@@ -123,6 +123,7 @@ vim.lsp.enable {
 	'ruff',
 	'jinja_lsp',
 	'html',
+	'docker_language_server',
 }
 
 require('ferris').setup {}
