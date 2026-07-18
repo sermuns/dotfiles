@@ -124,6 +124,7 @@ vim.lsp.enable {
 	'jinja_lsp',
 	'html',
 	'docker_language_server',
+	'sqruff',
 }
 
 require('ferris').setup {}
