@@ -130,10 +130,10 @@ binds {
         spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     }
     XF86MonBrightnessUp allow-when-locked=true {
-        spawn "brightnessctl" "--class=backlight" "set" "+10%"
+        spawn "brightnessctl" "--class=backlight" "set" "+2%"
     }
     XF86MonBrightnessDown allow-when-locked=true {
-        spawn "brightnessctl" "--class=backlight" "set" "10%-"
+        spawn "brightnessctl" "--class=backlight" "set" "2%-"
     }
     XF86AudioPlay allow-when-locked=true {
         spawn "playerctl" "play-pause"
