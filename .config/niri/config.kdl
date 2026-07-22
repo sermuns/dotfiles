@@ -87,6 +87,9 @@ binds {
     Ctrl+Alt+T hotkey-overlay-title="Open a Terminal" {
         spawn "foot"
     }
+    Ctrl+Alt+Apostrophe {
+        spawn "wezterm"
+    }
     Mod+T {
         spawn "~/.local/bin/toggle-theme.sh"
     }
