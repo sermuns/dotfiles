@@ -426,7 +426,7 @@ binds {
     Mod+Shift+S {
         suspend
     }
-    Mod+Alt+P repeat=false {
+    Super+P repeat=false {
         spawn-sh "wl-mirror eDP-1"
     }
     Mod+Shift+U repeat=false {
