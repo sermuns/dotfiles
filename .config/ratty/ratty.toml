@@ -1,10 +1,10 @@
 [window]
 width = 960
 height = 620
-opacity = 0.8
+opacity = 1
 # scale_factor = 1.0
-# update_mode = "Continuous"  # Use "LowPower" to redraw only after input or terminal output.
-# frame_interval_ms = 33      # Minimum milliseconds between LowPower redraws.
+update_mode = "LowPower"  # Use "LowPower" to redraw only after input or terminal output.
+frame_interval_ms = 100      # Minimum milliseconds between LowPower redraws.
 
 [terminal]
 default_cols = 104
@@ -13,21 +13,21 @@ scrollback = 2000
 mouse_scroll_lines = 3
 
 # [shell]
-# program = "/bin/bash" 
+# program = "/bin/bash"
 # args = []
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-family = "DejaVu Sans Mono"
+family = "Monaspace Krypton"
 style = "Regular"
-size = 12
+size = 50
 
 [cursor.model]
 path = "CairoSpinyMouse.obj"
 # texture = "texture.png"
-scale_factor = 6.0
+scale_factor = 4.0
 brightness = 0.5
 x_offset = 0.5
 plane_offset = 18.0
