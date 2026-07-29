@@ -16,6 +16,9 @@ input {
     }
     focus-follows-mouse max-scroll-amount="25%"
 }
+output "AlgolTek, Inc. 0x0001 0x434E3031" {
+    mode "1920x1080@60.000"
+}
 output "eDP-1" {
     scale 1
 }
