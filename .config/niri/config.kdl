@@ -12,7 +12,8 @@ input {
         natural-scroll
     }
     mouse {
-        accel-speed -0.55
+        accel-speed -0.3
+	accel-profile "flat"
     }
     focus-follows-mouse max-scroll-amount="25%"
 }
@@ -66,13 +67,14 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     // off
     slowdown 0.3
+
 }
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
 window-rule {
-    match title="ironfoil-gui|snake-macroquad|varelsekampen|super-mario-bros-from-memory|vicuttr|caligula|.*witness.*|wacky-effects|.*macroquad.*|debug-.*|rat.*|QEMU|backrooms.*"
+    match title="ironfoil-gui|snake-macroquad|varelsekampen|super-mario-bros-from-memory|vicuttr|caligula|.*witness.*|wacky-effects|.*macroquad.*|debug-.*|rat.*|QEMU|backrooms.*|rat-game"
     open-focused false
 }
 window-rule {
