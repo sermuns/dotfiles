@@ -19,6 +19,7 @@ input {
 }
 output "AlgolTek, Inc. 0x0001 0x434E3031" {
     mode "1920x1080@60.000"
+    scale 0.9
 }
 output "eDP-1" {
     scale 1
