@@ -53,8 +53,6 @@ if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init bash --cmd cd)"
 fi
 
-alias fastfetch='fastfetch --sixel ~/Pictures/typst.jpg'
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
