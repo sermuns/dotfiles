@@ -125,6 +125,7 @@ vim.lsp.enable {
 	'html',
 	'docker_language_server',
 	'sqruff',
+	'tinymist',
 }
 
 require('ferris').setup {}
