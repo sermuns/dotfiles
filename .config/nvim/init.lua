@@ -104,7 +104,7 @@ vim.pack.add({
 	{
 		src = 'https://github.com/sermuns/MEREAD',
 		version = vim.version.range('1')
-	}
+	},
 })
 
 vim.lsp.config('html', {
@@ -125,6 +125,7 @@ vim.lsp.enable {
 	'html',
 	'docker_language_server',
 	'sqruff',
+	'ts_ls',
 	'tinymist',
 }
 
