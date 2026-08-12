@@ -19,7 +19,7 @@ input {
 }
 output "AlgolTek, Inc. 0x0001 0x434E3031" {
     mode "1920x1080@60.000"
-    scale 0.9
+    scale 1.0
 }
 output "eDP-1" {
     scale 1
@@ -31,7 +31,8 @@ output "Samsung Electric Company SyncMaster H1AK500000" {
     mode "1920x1080@60.000"
 }
 output "Dell Inc. DELL E2209W W631F89P0JMI" {
-    scale 0.9
+    mode "1920x1080@59.939"
+    scale 1.0
 }
 layout {
     background-color "hsl(0, 0%, 13%)"
@@ -448,7 +449,7 @@ cursor {
 }
 environment {
     OZONE_PLATFORM "wayland"
-    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
     GDK_BACKEND "wayland,x11"
     QT_QPA_PLATFORM "wayland"
     _JAVA_AWT_WM_NONREPARENTING "1"
