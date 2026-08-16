@@ -2,7 +2,7 @@ smoothing = false
 
 night_temp = 3000
 day_temp = 6500
-night_gamma = 80
+night_gamma = 90
 day_gamma = 100
 
 static_temp = 6500
