@@ -105,6 +105,10 @@ vim.pack.add({
 		src = 'https://github.com/sermuns/MEREAD',
 		version = vim.version.range('1')
 	},
+	{
+		src = 'https://github.com/linrongbin16/gitlinker.nvim',
+		version = vim.version.range('5')
+	},
 })
 
 vim.lsp.config('html', {
@@ -178,3 +182,5 @@ require('todo-comments').setup {}
 vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 
 vim.cmd.colorscheme 'tokyonight-night'
+
+require('gitlinker').setup {}
