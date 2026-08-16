@@ -162,13 +162,13 @@ animate.setup {
 	cursor = {
 		timing = animate.gen_timing.quadratic {
 			easing = 'in-out',
-			duration = 2,
+			duration = 1,
 		}
 	},
 	scroll = {
 		timing = animate.gen_timing.quadratic {
 			easing = 'out',
-			duration = 2,
+			duration = 1,
 		}
 	}
 }
