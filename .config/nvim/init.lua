@@ -142,6 +142,12 @@ require('fidget').setup {}
 require('mini.completion').setup {}
 -- do file path completion
 vim.keymap.set("i", "<C-f>", "<C-x><C-f>", { remap = true })
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = { 'neo-tree' },
+	callback = function()
+		vim.b.minicompletion_disable = true
+	end
+})
 
 local statusline = require('mini.statusline')
 statusline.setup {}
