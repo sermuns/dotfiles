@@ -27,6 +27,9 @@ output "eDP-1" {
 output "Samsung Electric Company Odyssey G50A HNMWB00460" {
     scale 1
 }
+output "Vestel Elektronik Sanayi ve Ticaret A. S. 43UHD_LCD_TV Unknown" {
+    mode "1920x1080@60.000"
+}
 output "Samsung Electric Company SyncMaster H1AK500000" {
     mode "1920x1080@60.000"
 }
