@@ -132,6 +132,7 @@ vim.lsp.enable {
 	'ts_ls',
 	'tinymist',
 	'jsonls',
+	'verible',
 }
 
 require('ferris').setup {}
