@@ -79,7 +79,7 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match title="ironfoil-gui|snake-macroquad|varelsekampen|super-mario-bros-from-memory|vicuttr|caligula|.*witness.*|wacky-effects|.*macroquad.*|debug-.*|rat.*|QEMU|backrooms.*|rat-game"
+    match title="ironfoil-gui|snake-macroquad|varelsekampen.*|super-mario-bros-from-memory|vicuttr|caligula|.*witness.*|wacky-effects|.*macroquad.*|debug-.*|rat.*|QEMU|backrooms.*|rat-game"
     open-focused false
 }
 window-rule {
