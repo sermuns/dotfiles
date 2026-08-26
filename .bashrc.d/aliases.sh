@@ -64,3 +64,4 @@ alias zathura='zathura --fork'
 alias pac='sudo pacman'
 alias vim='nvim'
 alias huggingface-cli='hf'
+alias z=zellij
