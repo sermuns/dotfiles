@@ -89,6 +89,10 @@
       "rev": "4a6883cb13fe097a20a046eb55f6dffd239276e3",
       "src": "https://github.com/stevearc/quicker.nvim"
     },
+    "ron.vim": {
+      "rev": "f749e543975a82e8dd9a6e7df9600a1c098ae800",
+      "src": "https://github.com/ron-rs/ron.vim"
+    },
     "rustaceanvim": {
       "rev": "9cb125de42c0256ed1bc1f9ded8d8f0381317a17",
       "src": "https://github.com/mrcjkb/rustaceanvim",

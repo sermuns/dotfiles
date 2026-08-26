@@ -109,6 +109,7 @@ vim.pack.add({
 		src = 'https://github.com/linrongbin16/gitlinker.nvim',
 		version = vim.version.range('5')
 	},
+	'https://github.com/ron-rs/ron.vim'
 })
 
 vim.lsp.config('html', {
