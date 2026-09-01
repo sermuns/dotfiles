@@ -135,6 +135,7 @@ vim.lsp.enable {
 	'jsonls',
 	'verible',
 	'kdl_lsp',
+	'nil_ls',
 }
 
 require('ferris').setup {}
