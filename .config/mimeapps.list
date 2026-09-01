@@ -27,6 +27,7 @@ application/xhtml+xml=floorp-85aca4d2-8887-4e31-879e-7d407d879cb1.desktop
 application/x-extension-xhtml=floorp-85aca4d2-8887-4e31-879e-7d407d879cb1.desktop
 application/x-extension-xht=floorp-85aca4d2-8887-4e31-879e-7d407d879cb1.desktop
 video/matroska=mpv.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
