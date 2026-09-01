@@ -4,8 +4,6 @@ alias rt="gio trash"
 alias yt-dlp='yt-dlp --no-warnings'
 alias p='python -q'
 alias gq='gnome-session-quit'
-alias pdfgrep='pdfgrep --cache --color=always'
-alias srv='penguin serve -q'
 alias lg='lazygit'
 alias n="numbat"
 
@@ -20,8 +18,6 @@ alias pcup='process-compose up -D'
 alias pcd='process-compose down'
 alias pca='process-compose attach'
 
-alias mpvnv='mpv --no-video'
-
 alias sl='sl -ade'
 
 alias pip='uv pip'
@@ -29,19 +25,11 @@ alias pip='uv pip'
 alias ls='eza --icons --hyperlink auto'
 alias l='ls -hF'
 alias la='ls -a'
-alias lla='ls -la'
 alias tree='eza --tree'
 
 alias irc='ssh -t shipon.lysator.liu.se -- tmux -u a'
 
 alias gh='env -u GITHUB_TOKEN gh'
-alias release-plz='env -u GITHUB_TOKEN release-plz'
-
-alias human='numfmt --to=iec'
-
-alias @meread='cargo run --manifest-path ~/Git/meread/Cargo.toml --'
-alias @picodocs='cargo run --manifest-path ~/Git/picodocs/Cargo.toml --'
-alias @stil='cargo run --manifest-path ~/Git/stil/Cargo.toml --'
 
 alias rau='systemctl --user start ra-multiplex'
 alias rad='systemctl --user stop ra-multiplex'
@@ -65,3 +53,4 @@ alias pac='sudo pacman'
 alias vim='nvim'
 alias huggingface-cli='hf'
 alias z=zellij
+alias v=nvim
