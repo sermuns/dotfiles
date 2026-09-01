@@ -66,3 +66,7 @@ function record-webcam() {
 		-c:a aac -b:a 128k \
 		"file:$1"
 }
+
+function duration() {
+	ffprobe -v error -select_streams v:0 -show_entries stream=duration -of default=noprint_wrappers=1:nokey=1 "file:$1"
+}
