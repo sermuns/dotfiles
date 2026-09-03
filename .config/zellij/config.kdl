@@ -290,24 +290,20 @@ plugins {
     tab-bar location="zellij:tab-bar"
 }
 
-// Plugins to load in the background when a new session starts
-// eg. "file:/path/to/my-plugin.wasm"
-// eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     zellij:link
 }
  
-simplified_ui true
+// simplified_ui true
  
 theme "tokyo-night"
- 
-default_mode "normal"
  
 show_startup_tips false
 
 ui {
     pane_frames {
         hide_session_name true
+	rounded_corners false
     }
 }
 
