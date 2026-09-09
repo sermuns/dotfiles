@@ -109,7 +109,9 @@ vim.pack.add({
 		src = 'https://github.com/linrongbin16/gitlinker.nvim',
 		version = vim.version.range('5')
 	},
-	'https://github.com/ron-rs/ron.vim'
+	'https://github.com/ron-rs/ron.vim',
+	'https://github.com/teamtype/teamtype-nvim',
+	'https://github.com/chrisbra/csv.vim',
 })
 
 vim.lsp.config('html', {
@@ -136,6 +138,7 @@ vim.lsp.enable {
 	'verible',
 	'kdl_lsp',
 	'nil_ls',
+	'clangd',
 }
 
 require('ferris').setup {}
