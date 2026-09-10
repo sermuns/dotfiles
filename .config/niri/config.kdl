@@ -37,6 +37,9 @@ output "Dell Inc. DELL E2209W W631F89P0JMI" {
     mode "1920x1080@59.939"
     scale 1.0
 }
+output "Sony SONY TV 0x01010101" {
+	position x=1920 y=0
+}
 layout {
     background-color "hsl(0, 0%, 13%)"
     gaps 0
