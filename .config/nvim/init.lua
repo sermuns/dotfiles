@@ -112,6 +112,7 @@ vim.pack.add({
 	'https://github.com/ron-rs/ron.vim',
 	'https://github.com/teamtype/teamtype-nvim',
 	'https://github.com/chrisbra/csv.vim',
+	'https://github.com/saecki/crates.nvim',
 })
 
 vim.lsp.config('html', {
@@ -198,3 +199,5 @@ vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 vim.cmd.colorscheme 'tokyonight-night'
 
 require('gitlinker').setup {}
+
+require('crates').setup()

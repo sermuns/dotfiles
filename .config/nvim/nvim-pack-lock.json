@@ -5,6 +5,10 @@
       "src": "https://github.com/sermuns/MEREAD",
       "version": "1.0.0 - 2.0.0"
     },
+    "crates.nvim": {
+      "rev": "b8281be336498035f9288d6542b2881a7140a9ec",
+      "src": "https://github.com/saecki/crates.nvim"
+    },
     "csv.vim": {
       "rev": "375c1a81a4f186ce8949824f3b87ddc6727a63af",
       "src": "https://github.com/chrisbra/csv.vim"
