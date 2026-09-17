@@ -1,0 +1,1596 @@
+{
+    "controllers": [
+        {
+            "active_mode": 0,
+            "colors": [
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255
+            ],
+            "description": "Kingston Fury Beast/Renegade DDR4/5 DRAM Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Fury Slot 1, LED 1"
+                },
+                {
+                    "name": "Fury Slot 1, LED 2"
+                },
+                {
+                    "name": "Fury Slot 1, LED 3"
+                },
+                {
+                    "name": "Fury Slot 1, LED 4"
+                },
+                {
+                    "name": "Fury Slot 1, LED 5"
+                },
+                {
+                    "name": "Fury Slot 1, LED 6"
+                },
+                {
+                    "name": "Fury Slot 1, LED 7"
+                },
+                {
+                    "name": "Fury Slot 1, LED 8"
+                },
+                {
+                    "name": "Fury Slot 1, LED 9"
+                },
+                {
+                    "name": "Fury Slot 1, LED 10"
+                },
+                {
+                    "name": "Fury Slot 2, LED 1"
+                },
+                {
+                    "name": "Fury Slot 2, LED 2"
+                },
+                {
+                    "name": "Fury Slot 2, LED 3"
+                },
+                {
+                    "name": "Fury Slot 2, LED 4"
+                },
+                {
+                    "name": "Fury Slot 2, LED 5"
+                },
+                {
+                    "name": "Fury Slot 2, LED 6"
+                },
+                {
+                    "name": "Fury Slot 2, LED 7"
+                },
+                {
+                    "name": "Fury Slot 2, LED 8"
+                },
+                {
+                    "name": "Fury Slot 2, LED 9"
+                },
+                {
+                    "name": "Fury Slot 2, LED 10"
+                }
+            ],
+            "location": "I2C: SMBus I801 adapter at 0000:00:1f.4 (/dev/i2c-6), addresses [0x58,0x5A]",
+            "modes": [
+                {
+                    "brightness": 25,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 48,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 80,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 2,
+                    "flags": 21,
+                    "name": "Rainbow",
+                    "speed": 25,
+                    "speed_max": 0,
+                    "speed_min": 60
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 2,
+                    "flags": 21,
+                    "name": "Spectrum",
+                    "speed": 25,
+                    "speed_max": 0,
+                    "speed_min": 60
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 0,
+                    "flags": 81,
+                    "name": "Rhythm",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 10
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740
+                    ],
+                    "colors_max": 10,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 113,
+                    "name": "Breath",
+                    "speed": 5,
+                    "speed_max": 1,
+                    "speed_min": 10
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740
+                    ],
+                    "colors_max": 10,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 81,
+                    "name": "Dynamic",
+                    "speed": 300,
+                    "speed_max": 100,
+                    "speed_min": 1000
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Slide",
+                    "speed": 8,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 0,
+                    "flags": 81,
+                    "name": "Slither",
+                    "speed": 40,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 0,
+                    "flags": 81,
+                    "name": "Teleport",
+                    "speed": 8,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Wind",
+                    "speed": 8,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740
+                    ],
+                    "colors_max": 10,
+                    "colors_min": 1,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Comet",
+                    "speed": 25,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740
+                    ],
+                    "colors_max": 10,
+                    "colors_min": 1,
+                    "direction": 3,
+                    "flags": 85,
+                    "name": "Rain",
+                    "speed": 25,
+                    "speed_max": 8,
+                    "speed_min": 28
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740
+                    ],
+                    "colors_max": 10,
+                    "colors_min": 1,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Firework",
+                    "speed": 33,
+                    "speed_max": 33,
+                    "speed_min": 83
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Voltage",
+                    "speed": 16,
+                    "speed_max": 5,
+                    "speed_min": 18
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 2,
+                    "flags": 21,
+                    "name": "Flame",
+                    "speed": 64,
+                    "speed_max": 40,
+                    "speed_min": 64
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 17,
+                    "name": "Twilight",
+                    "speed": 64,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255,
+                        65280,
+                        25855,
+                        16711680,
+                        61423,
+                        8388736,
+                        7826688,
+                        51455,
+                        16733695,
+                        16743740,
+                        1052688
+                    ],
+                    "colors_max": 11,
+                    "colors_min": 2,
+                    "direction": 2,
+                    "flags": 85,
+                    "name": "Fury",
+                    "speed": 76,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 80,
+                    "brightness_max": 100,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 17,
+                    "name": "Prism",
+                    "speed": 40,
+                    "speed_max": 0,
+                    "speed_min": 60
+                }
+            ],
+            "name": "Kingston Fury DDR4 DRAM",
+            "serial": "",
+            "type": 1,
+            "vendor": "Kingston",
+            "version": "",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 10,
+                    "leds_max": 10,
+                    "leds_min": 10,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Fury Slot 1",
+                    "type": 1
+                },
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 10,
+                    "leds_max": 10,
+                    "leds_min": 10,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Fury Slot 2",
+                    "type": 1
+                }
+            ]
+        },
+        {
+            "active_mode": 0,
+            "colors": [
+                42
+            ],
+            "description": "ASUS Aura GPU Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "GPU"
+                }
+            ],
+            "location": "NVIDIA i2c adapter 1 at 1:00.0\n (/dev/i2c-7), address 0x2A",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 256,
+                    "name": "Off",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 288,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 288,
+                    "name": "Breathing",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 288,
+                    "name": "Flashing",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 256,
+                    "name": "Spectrum Cycle",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                }
+            ],
+            "name": "ASUS ROG STRIX GeForce RTX 2080 Ti Gaming OC",
+            "serial": "",
+            "type": 2,
+            "vendor": "ASUS",
+            "version": "",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "GPU",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "active_mode": 0,
+            "colors": [
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255,
+                255
+            ],
+            "description": "Logitech G915 Keyboard Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Key: A"
+                },
+                {
+                    "name": "Key: B"
+                },
+                {
+                    "name": "Key: C"
+                },
+                {
+                    "name": "Key: D"
+                },
+                {
+                    "name": "Key: E"
+                },
+                {
+                    "name": "Key: F"
+                },
+                {
+                    "name": "Key: G"
+                },
+                {
+                    "name": "Key: H"
+                },
+                {
+                    "name": "Key: I"
+                },
+                {
+                    "name": "Key: J"
+                },
+                {
+                    "name": "Key: K"
+                },
+                {
+                    "name": "Key: L"
+                },
+                {
+                    "name": "Key: M"
+                },
+                {
+                    "name": "Key: N"
+                },
+                {
+                    "name": "Key: O"
+                },
+                {
+                    "name": "Key: P"
+                },
+                {
+                    "name": "Key: Q"
+                },
+                {
+                    "name": "Key: R"
+                },
+                {
+                    "name": "Key: S"
+                },
+                {
+                    "name": "Key: T"
+                },
+                {
+                    "name": "Key: U"
+                },
+                {
+                    "name": "Key: V"
+                },
+                {
+                    "name": "Key: W"
+                },
+                {
+                    "name": "Key: X"
+                },
+                {
+                    "name": "Key: Y"
+                },
+                {
+                    "name": "Key: Z"
+                },
+                {
+                    "name": "Key: 1"
+                },
+                {
+                    "name": "Key: 2"
+                },
+                {
+                    "name": "Key: 3"
+                },
+                {
+                    "name": "Key: 4"
+                },
+                {
+                    "name": "Key: 5"
+                },
+                {
+                    "name": "Key: 6"
+                },
+                {
+                    "name": "Key: 7"
+                },
+                {
+                    "name": "Key: 8"
+                },
+                {
+                    "name": "Key: 9"
+                },
+                {
+                    "name": "Key: 0"
+                },
+                {
+                    "name": "Key: Enter"
+                },
+                {
+                    "name": "Key: Escape"
+                },
+                {
+                    "name": "Key: Backspace"
+                },
+                {
+                    "name": "Key: Tab"
+                },
+                {
+                    "name": "Key: Space"
+                },
+                {
+                    "name": "Key: -"
+                },
+                {
+                    "name": "Key: ="
+                },
+                {
+                    "name": "Key: ["
+                },
+                {
+                    "name": "Key: ]"
+                },
+                {
+                    "name": "Key: \\ (ANSI)"
+                },
+                {
+                    "name": "Key: #"
+                },
+                {
+                    "name": "Key: ;"
+                },
+                {
+                    "name": "Key: '"
+                },
+                {
+                    "name": "Key: `"
+                },
+                {
+                    "name": "Key: ,"
+                },
+                {
+                    "name": "Key: ."
+                },
+                {
+                    "name": "Key: /"
+                },
+                {
+                    "name": "Key: Caps Lock"
+                },
+                {
+                    "name": "Key: F1"
+                },
+                {
+                    "name": "Key: F2"
+                },
+                {
+                    "name": "Key: F3"
+                },
+                {
+                    "name": "Key: F4"
+                },
+                {
+                    "name": "Key: F5"
+                },
+                {
+                    "name": "Key: F6"
+                },
+                {
+                    "name": "Key: F7"
+                },
+                {
+                    "name": "Key: F8"
+                },
+                {
+                    "name": "Key: F9"
+                },
+                {
+                    "name": "Key: F10"
+                },
+                {
+                    "name": "Key: F11"
+                },
+                {
+                    "name": "Key: F12"
+                },
+                {
+                    "name": "Key: Print Screen"
+                },
+                {
+                    "name": "Key: Scroll Lock"
+                },
+                {
+                    "name": "Key: Pause/Break"
+                },
+                {
+                    "name": "Key: Insert"
+                },
+                {
+                    "name": "Key: Home"
+                },
+                {
+                    "name": "Key: Page Up"
+                },
+                {
+                    "name": "Key: Delete"
+                },
+                {
+                    "name": "Key: End"
+                },
+                {
+                    "name": "Key: Page Down"
+                },
+                {
+                    "name": "Key: Right Arrow"
+                },
+                {
+                    "name": "Key: Left Arrow"
+                },
+                {
+                    "name": "Key: Down Arrow"
+                },
+                {
+                    "name": "Key: Up Arrow"
+                },
+                {
+                    "name": "Key: \\ (ISO)"
+                },
+                {
+                    "name": "Key: Menu"
+                },
+                {
+                    "name": "Key: Left Control"
+                },
+                {
+                    "name": "Key: Left Shift"
+                },
+                {
+                    "name": "Key: Left Alt"
+                },
+                {
+                    "name": "Key: Left Windows"
+                },
+                {
+                    "name": "Key: Right Control"
+                },
+                {
+                    "name": "Key: Right Shift"
+                },
+                {
+                    "name": "Key: Right Alt"
+                },
+                {
+                    "name": "Key: Right Windows"
+                },
+                {
+                    "name": "Key: Media Previous"
+                },
+                {
+                    "name": "Key: Media Play/Pause"
+                },
+                {
+                    "name": "Key: Media Next"
+                },
+                {
+                    "name": "Key: Media Mute"
+                },
+                {
+                    "name": "Logo"
+                },
+                {
+                    "name": "Key: Brightness"
+                },
+                {
+                    "name": "Key: Num Lock"
+                },
+                {
+                    "name": "Key: Number Pad /"
+                },
+                {
+                    "name": "Key: Number Pad *"
+                },
+                {
+                    "name": "Key: Number Pad -"
+                },
+                {
+                    "name": "Key: Number Pad +"
+                },
+                {
+                    "name": "Key: Number Pad Enter"
+                },
+                {
+                    "name": "Key: Number Pad 1"
+                },
+                {
+                    "name": "Key: Number Pad 2"
+                },
+                {
+                    "name": "Key: Number Pad 3"
+                },
+                {
+                    "name": "Key: Number Pad 4"
+                },
+                {
+                    "name": "Key: Number Pad 5"
+                },
+                {
+                    "name": "Key: Number Pad 6"
+                },
+                {
+                    "name": "Key: Number Pad 7"
+                },
+                {
+                    "name": "Key: Number Pad 8"
+                },
+                {
+                    "name": "Key: Number Pad 9"
+                },
+                {
+                    "name": "Key: Number Pad 0"
+                },
+                {
+                    "name": "Key: Number Pad ."
+                },
+                {
+                    "name": "Key: G1"
+                },
+                {
+                    "name": "Key: G2"
+                },
+                {
+                    "name": "Key: G3"
+                },
+                {
+                    "name": "Key: G4"
+                },
+                {
+                    "name": "Key: G5"
+                }
+            ],
+            "location": "",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        255
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 64,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 0,
+                    "name": "Off",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 81,
+                    "name": "Breathing",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 17,
+                    "name": "Spectrum Cycle",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 5,
+                    "flags": 17,
+                    "name": "Rainbow Wave",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 65,
+                    "name": "Reactive (Ripple)",
+                    "speed": 2,
+                    "speed_max": 2,
+                    "speed_min": 200
+                }
+            ],
+            "name": "Logitech G915 Wireless RGB Mechanical Gaming Keyboard",
+            "serial": "",
+            "type": 5,
+            "vendor": "Logitech",
+            "version": "",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 117,
+                    "leds_max": 117,
+                    "leds_min": 117,
+                    "matrix_map": {
+                        "height": 7,
+                        "map": [
+                            93,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            94,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            37,
+                            4294967295,
+                            54,
+                            55,
+                            56,
+                            57,
+                            4294967295,
+                            58,
+                            59,
+                            60,
+                            61,
+                            4294967295,
+                            62,
+                            63,
+                            64,
+                            65,
+                            4294967295,
+                            66,
+                            67,
+                            68,
+                            4294967295,
+                            89,
+                            90,
+                            91,
+                            92,
+                            112,
+                            4294967295,
+                            49,
+                            26,
+                            27,
+                            28,
+                            29,
+                            30,
+                            31,
+                            32,
+                            33,
+                            34,
+                            35,
+                            4294967295,
+                            41,
+                            42,
+                            38,
+                            4294967295,
+                            4294967295,
+                            69,
+                            70,
+                            71,
+                            4294967295,
+                            95,
+                            96,
+                            97,
+                            98,
+                            113,
+                            4294967295,
+                            39,
+                            4294967295,
+                            16,
+                            22,
+                            4,
+                            17,
+                            4294967295,
+                            19,
+                            24,
+                            20,
+                            8,
+                            14,
+                            15,
+                            43,
+                            44,
+                            45,
+                            4294967295,
+                            72,
+                            73,
+                            74,
+                            4294967295,
+                            107,
+                            108,
+                            109,
+                            99,
+                            114,
+                            4294967295,
+                            53,
+                            4294967295,
+                            0,
+                            18,
+                            3,
+                            5,
+                            4294967295,
+                            6,
+                            7,
+                            9,
+                            10,
+                            11,
+                            47,
+                            48,
+                            46,
+                            36,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            104,
+                            105,
+                            106,
+                            4294967295,
+                            115,
+                            4294967295,
+                            82,
+                            79,
+                            25,
+                            23,
+                            2,
+                            21,
+                            4294967295,
+                            1,
+                            4294967295,
+                            13,
+                            12,
+                            50,
+                            51,
+                            52,
+                            86,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            78,
+                            4294967295,
+                            4294967295,
+                            101,
+                            102,
+                            103,
+                            100,
+                            116,
+                            4294967295,
+                            81,
+                            84,
+                            83,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            40,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            87,
+                            88,
+                            80,
+                            85,
+                            4294967295,
+                            76,
+                            77,
+                            75,
+                            4294967295,
+                            110,
+                            4294967295,
+                            111,
+                            4294967295
+                        ],
+                        "width": 27
+                    },
+                    "name": "Keyboard",
+                    "type": 2
+                }
+            ]
+        },
+        {
+            "active_mode": 1,
+            "colors": [
+                170,
+                170
+            ],
+            "description": "Logitech Wireless Lightspeed Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Primary LED"
+                },
+                {
+                    "name": "Logo LED"
+                }
+            ],
+            "location": "HID: /dev/hidraw7 (Receiver) \r\nWireless Index: 255",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 0,
+                    "name": "Off",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 48,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 17,
+                    "name": "Spectrum Cycle",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                },
+                {
+                    "brightness": 100,
+                    "brightness_max": 100,
+                    "brightness_min": 1,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 49,
+                    "name": "Breathing",
+                    "speed": 50,
+                    "speed_max": 10,
+                    "speed_min": 200
+                }
+            ],
+            "name": "G Pro Wireless Gaming Mouse",
+            "serial": "",
+            "type": 6,
+            "vendor": "Logitech",
+            "version": "",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Primary Zone",
+                    "type": 0
+                },
+                {
+                    "display_name": "",
+                    "flags": 4096,
+                    "leds_count": 1,
+                    "leds_max": 1,
+                    "leds_min": 1,
+                    "matrix_map": {
+                        "height": 0,
+                        "width": 0
+                    },
+                    "name": "Logo Zone",
+                    "type": 0
+                }
+            ]
+        }
+    ],
+    "profile_name": "red",
+    "profile_version": 6
+}
