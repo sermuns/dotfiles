@@ -113,6 +113,7 @@ vim.pack.add({
 	'https://github.com/teamtype/teamtype-nvim',
 	'https://github.com/chrisbra/csv.vim',
 	'https://github.com/saecki/crates.nvim',
+	'https://github.com/rodjek/vim-puppet',
 })
 
 vim.lsp.config('html', {
