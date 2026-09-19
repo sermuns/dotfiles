@@ -6,7 +6,7 @@
       "version": "1.0.0 - 2.0.0"
     },
     "crates.nvim": {
-      "rev": "b8281be336498035f9288d6542b2881a7140a9ec",
+      "rev": "7039bc1d130e424232a7aa64ceddb170a154ff5b",
       "src": "https://github.com/saecki/crates.nvim"
     },
     "csv.vim": {
@@ -22,7 +22,7 @@
       "src": "https://github.com/j-hui/fidget.nvim"
     },
     "fzf-lua": {
-      "rev": "05e44d38de0a79c11fba5f7bf8138791b1dbdd1e",
+      "rev": "02bc882f208f3481aa959dbbee8ce5edad2fd8b2",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitlinker.nvim": {
@@ -31,7 +31,7 @@
       "version": "5.0.0 - 6.0.0"
     },
     "gitsigns.nvim": {
-      "rev": "f2421c550618d257048afa650413d9e542ddbe67",
+      "rev": "8d79f2410c76e62b92e51c28c82e28c1c5a3daeb",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "mini.completion": {
@@ -82,11 +82,11 @@
       "src": "https://github.com/brenoprata10/nvim-highlight-colors"
     },
     "nvim-lspconfig": {
-      "rev": "ac9d2f7c4757db6320cab6697fe73e5e8adb2457",
+      "rev": "ffd261c09c3dabd0bf1a438f47a8ae3b22f3c3ff",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-web-devicons": {
-      "rev": "5f032a85be210cd1c6ac98861eb3b187ff3bd5eb",
+      "rev": "914decffe650296c87312c53b7933ecb86718499",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
@@ -107,7 +107,7 @@
       "version": "9.0.0 - 10.0.0"
     },
     "smear-cursor.nvim": {
-      "rev": "9e9378d6ee34bb3782e0e8c63d9ec8ca618b479b",
+      "rev": "f63ff221158b5b0ca9de1d7d1ff2e0dce5649614",
       "src": "https://github.com/sphamba/smear-cursor.nvim"
     },
     "teamtype-nvim": {
@@ -134,6 +134,10 @@
     "typst-preview.nvim": {
       "rev": "1c2e19486397be1c580b560fc50ee36abe329c46",
       "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "vim-puppet": {
+      "rev": "21b2b9ecaf8ef18ea4755ed7f82937eb97989c82",
+      "src": "https://github.com/rodjek/vim-puppet"
     }
   }
 }
