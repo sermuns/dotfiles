@@ -1,5 +1,5 @@
 {
-  "defaultModel": "qwen2.5-coder:14b",
+  "defaultModel": "gemma4:26b",
   "defaultProvider": "ollama",
   "lastChangelogVersion": "0.86.1",
   "packages": [
