@@ -133,6 +133,7 @@ vim.lsp.enable {
 	'jinja_lsp',
 	'html',
 	'docker_language_server',
+	'dockerls',
 	'sqruff',
 	'ts_ls',
 	'tinymist',
