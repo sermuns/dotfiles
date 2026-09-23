@@ -9,6 +9,10 @@ require('typst-preview').setup {
 vim.lsp.config["tinymist"] = {
 	settings = {
 		formatterMode = "typstyle",
+		exportTarget = "bundle",
+		typstExtraArgs = {
+			"--features=html,bundle",
+		}
 	}
 }
 
