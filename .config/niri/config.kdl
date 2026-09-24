@@ -93,6 +93,11 @@ window-rule {
     match title="kratos - Moonlight"
     open-on-output "HDMI-A-2"
 }
+window-rule {
+	match app-id="Pinentry-gtk"
+	open-floating true
+	open-focused true
+}
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
