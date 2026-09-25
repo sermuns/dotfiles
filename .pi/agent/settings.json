@@ -1,9 +1,8 @@
 {
-  "defaultModel": "gemma4:26b",
-  "defaultProvider": "ollama",
-  "lastChangelogVersion": "0.86.1",
+  "lastChangelogVersion": "0.87.1",
   "packages": [
-    "npm:@ollama/pi-web-search"
+    "npm:@ollama/pi-web-search",
+    "git:github.com/huggingface/pi-llama"
   ],
   "theme": "dark"
 }
