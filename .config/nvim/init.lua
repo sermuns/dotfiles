@@ -142,6 +142,7 @@ vim.lsp.enable {
 	'kdl_lsp',
 	'nil_ls',
 	'clangd',
+	'bashls',
 }
 
 require('ferris').setup {}
