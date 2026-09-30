@@ -15,6 +15,8 @@ vim.o.undofile = true
 vim.opt.listchars = { tab = '| ', trail = '·', nbsp = '␣' }
 vim.o.list = true
 
+vim.o.exrc = true
+
 vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
