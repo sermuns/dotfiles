@@ -30,14 +30,9 @@ vim.lsp.config('rust_analyzer', {
 			cargo = {
 				features = "all",
 			},
-			-- procMacro = {
-			-- 	ignored = {
-			-- 		leptos_macro = {
-			-- 			"component",
-			-- 			"server",
-			-- 		},
-			-- 	},
-			-- },
+			check = {
+				command = "clippy"
+			}
 		},
 	}
 })
