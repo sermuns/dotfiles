@@ -98,6 +98,11 @@ window-rule {
 	open-floating true
 	open-focused true
 }
+window-rule {
+	match title="Order of the Sinking Star"
+	open-focused true
+	open-fullscreen true
+}
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
