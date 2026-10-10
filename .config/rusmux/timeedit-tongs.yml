@@ -1,5 +1,0 @@
-project_name: timeedit-tongs
-project_root: ~/Git/timeedit-tongs/web
-windows:
-  - dx: dx serve --package timeedit-tongs
-  - nvim: fd -e rs -e css -X vim
