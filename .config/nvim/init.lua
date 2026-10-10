@@ -4,7 +4,7 @@ vim.o.number = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.opt.showmode = false
+vim.o.showmode = false
 
 vim.o.cursorline = true
 vim.o.scrolloff = 10
@@ -70,7 +70,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	end
 })
 
-
 vim.api.nvim_create_autocmd('BufReadPost', {
 	group = vim.api.nvim_create_augroup('last-known-pos', { clear = true }),
 	callback = function(args)
@@ -83,74 +82,63 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 	end,
 })
 
-vim.cmd('packadd! nohlsearch')
-
-vim.pack.add({
-	'https://github.com/folke/tokyonight.nvim',
-	'https://github.com/neovim/nvim-lspconfig',
-	{ src = 'https://github.com/nvim-mini/mini.nvim', version = 'stable' },
-	'https://github.com/stevearc/quicker.nvim',
-	'https://github.com/lewis6991/gitsigns.nvim',
-	{
-		src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
-		version = vim.version.range('3')
-	},
-	"https://github.com/nvim-lua/plenary.nvim",
-	"https://github.com/MunifTanjim/nui.nvim",
-	'https://github.com/folke/todo-comments.nvim',
-	'https://github.com/j-hui/fidget.nvim',
-	'https://github.com/chomosuke/typst-preview.nvim',
-	'https://github.com/brenoprata10/nvim-highlight-colors',
-	'https://github.com/nvim-tree/nvim-web-devicons',
-	'https://github.com/vxpm/ferris.nvim',
-	{
-		src = 'https://github.com/sermuns/MEREAD',
-		version = vim.version.range('1')
-	},
-	{
-		src = 'https://github.com/linrongbin16/gitlinker.nvim',
-		version = vim.version.range('5')
-	},
-	'https://github.com/ron-rs/ron.vim',
-	'https://github.com/teamtype/teamtype-nvim',
-	'https://github.com/chrisbra/csv.vim',
-	'https://github.com/saecki/crates.nvim',
-	'https://github.com/rodjek/vim-puppet',
-})
+local range = vim.version.range
+vim.pack.add {
+	{ src = 'https://github.com/brenoprata10/nvim-highlight-colors' },
+	{ src = 'https://github.com/chomosuke/typst-preview.nvim',      version = range '1' },
+	{ src = 'https://github.com/chrisbra/csv.vim' },
+	{ src = 'https://github.com/folke/todo-comments.nvim',          version = range '1' },
+	{ src = 'https://github.com/folke/tokyonight.nvim',             version = range '4' },
+	{ src = 'https://github.com/j-hui/fidget.nvim',                 version = range '2' },
+	{ src = 'https://github.com/lewis6991/gitsigns.nvim',           version = range '2' },
+	{ src = 'https://github.com/linrongbin16/gitlinker.nvim',       version = range('5') },
+	{ src = 'https://github.com/neovim/nvim-lspconfig',             version = range '2' },
+	{ src = 'https://github.com/nvim-mini/mini.nvim',               version = 'stable' },
+	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',       version = range '3' },
+	{ src = 'https://github.com/nvim-tree/nvim-web-devicons' },
+	{ src = 'https://github.com/rodjek/vim-puppet' },
+	{ src = 'https://github.com/ron-rs/ron.vim' },
+	{ src = 'https://github.com/saecki/crates.nvim' },
+	{ src = 'https://github.com/sermuns/MEREAD',                    version = range '1' },
+	{ src = 'https://github.com/teamtype/teamtype-nvim' },
+	{ src = 'https://github.com/vxpm/ferris.nvim' },
+}
 
 vim.lsp.config('html', {
 	filetypes = { 'html', 'htmldjango' }
 })
 
 vim.lsp.enable {
-	'lua_ls',
-	'yamlls',
-	'tombi',
-	'just',
-	'rumdl',
-	'cssls',
-	'rust_analyzer',
 	'basedpyright',
-	'ruff',
-	'jinja_lsp',
-	'html',
+	'bashls',
+	'clangd',
+	'cssls',
 	'docker_language_server',
 	'dockerls',
-	'sqruff',
-	'ts_ls',
-	'tinymist',
+	'html',
+	'jinja_lsp',
 	'jsonls',
-	'verible',
+	'just',
 	'kdl_lsp',
+	'lua_ls',
 	'nil_ls',
-	'clangd',
-	'bashls',
+	'ruff',
+	'rumdl',
+	'rust_analyzer',
+	'sqruff',
+	'tinymist',
+	'tombi',
+	'ts_ls',
+	'verible',
+	'yamlls',
 }
 
+require('gitlinker').setup {}
+require('crates').setup()
+require('gitsigns').setup {}
+require('todo-comments').setup {}
 require('ferris').setup {}
-
-require('nvim-highlight-colors').setup({})
-
+require('nvim-highlight-colors').setup {}
 require('fidget').setup {}
 
 require('mini.completion').setup {}
@@ -162,6 +150,7 @@ vim.api.nvim_create_autocmd('FileType', {
 		vim.b.minicompletion_disable = true
 	end
 })
+vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
 
 local statusline = require('mini.statusline')
 statusline.setup {}
@@ -193,16 +182,4 @@ animate.setup {
 	}
 }
 
-
-require('quicker').setup {}
-require('gitsigns').setup {}
-require('todo-comments').setup {}
-
-
-vim.keymap.set('n', '\\', '<cmd>Neotree toggle<cr>')
-
 vim.cmd.colorscheme 'tokyonight-night'
-
-require('gitlinker').setup {}
-
-require('crates').setup()
