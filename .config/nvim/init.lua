@@ -94,7 +94,6 @@ vim.pack.add {
 	{ src = 'https://github.com/linrongbin16/gitlinker.nvim',       version = range('5') },
 	{ src = 'https://github.com/neovim/nvim-lspconfig',             version = range '2' },
 	{ src = 'https://github.com/nvim-mini/mini.nvim',               version = 'stable' },
-	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',       version = range '3' },
 	{ src = 'https://github.com/nvim-tree/nvim-web-devicons' },
 	{ src = 'https://github.com/rodjek/vim-puppet' },
 	{ src = 'https://github.com/ron-rs/ron.vim' },
@@ -102,6 +101,11 @@ vim.pack.add {
 	{ src = 'https://github.com/sermuns/MEREAD',                    version = range '1' },
 	{ src = 'https://github.com/teamtype/teamtype-nvim' },
 	{ src = 'https://github.com/vxpm/ferris.nvim' },
+
+	-- neo-tree
+	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',       version = range '3' },
+	{ src = 'https://github.com/nvim-lua/plenary.nvim' },
+	{ src = 'https://github.com/MunifTanjim/nui.nvim' },
 }
 
 vim.lsp.config('html', {
