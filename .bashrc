@@ -38,12 +38,6 @@ export PATH=$(
 	echo "${path[*]}"
 )
 
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		source "$rc"
-	done
-fi
-
 if command -v starship >/dev/null 2>&1; then
 	eval "$(starship init bash)"
 fi
@@ -88,11 +82,11 @@ alias yt-dlp='yt-dlp --no-warnings'
 alias zathura='zathura --fork'
 
 yt-album() {
-	yt-dlp "$@" --no-warnings --split-chapters -x -o "chapter:~/Music/%(title)s/[%(section_number)02d] %(section_title)s.%(ext)s" --exec rm
+	yt-dlp "$@" --no-warnings --split-chapters -x -o "chapter:$HOME/Music/%(title)s/[%(section_number)02d] %(section_title)s.%(ext)s" --exec rm
 }
 
 yt-playlist() {
-	yt-dlp "$@" -N 4 --no-warnings -x --audio-format opus -o "~/Music/%(playlist)s/[%(playlist_index)s] %(title)s.%(ext)s"
+	yt-dlp "$@" -N 4 --no-warnings -x --audio-format opus -o "$HOME/Music/%(playlist)s/[%(playlist_index)s] %(title)s.%(ext)s"
 }
 
 ly() {
@@ -102,7 +96,7 @@ ly() {
 flash() {
 	local input_file="$1"
 	local output_device="$2"
-	sudo pv $input_file -Yo $output_device
+	sudo pv "$input_file" -Yo "$output_device"
 }
 
 centercrop() {
@@ -110,11 +104,11 @@ centercrop() {
 		echo "Usage: centercrop <input> <output>"
 		return 1
 	fi
-	magick $1 -gravity center -crop "%[fx:min(w,h)]x%[fx:min(w,h)]+0+0" +repage $2
+	magick "$1" -gravity center -crop "%[fx:min(w,h)]x%[fx:min(w,h)]+0+0" +repage "$2"
 }
 
 monbr() {
-	ddcutil setvcp 10 $1
+	ddcutil setvcp 10 "$1"
 }
 
 fastfetch() {
@@ -122,11 +116,11 @@ fastfetch() {
 }
 
 opout() {
-	ffmpeg -i file:$1 -c copy file:${1%.*}.opus
+	ffmpeg -i "file:$1" -c copy "file:${1%.*}.opus"
 }
 
 function b() {
-	printf "%s %%" $(</sys/class/power_supply/BAT0/capacity) | figlet
+	printf "%s %%" "$(</sys/class/power_supply/BAT0/capacity)" | figlet
 }
 
 function t() {
@@ -134,7 +128,7 @@ function t() {
 }
 
 function ntfy() {
-	curl -d "$1" $NTFY
+	curl -d "$1" "$NTFY"
 }
 
 function record-webcam() {
