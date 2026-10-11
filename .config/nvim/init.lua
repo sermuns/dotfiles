@@ -187,3 +187,12 @@ animate.setup {
 }
 
 vim.cmd.colorscheme 'tokyonight-night'
+
+vim.api.nvim_create_user_command('LatexUnfuck', function()
+	local cursor_pos = vim.fn.getpos('.')
+	vim.cmd [[ %s/˚a/å/ge ]]
+	vim.cmd [[ %s/¨o/ö/ge ]]
+	vim.cmd [[ %s/¨a/ä/ge ]]
+	vim.cmd [[ %s/”/\"/ge ]]
+	vim.fn.setpos('.', cursor_pos)
+end, { desc = 'fix fucked copied LaTeX' })
