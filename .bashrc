@@ -20,7 +20,7 @@ export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export BUN_INSTALL="$HOME/.bun"
-export CARGO_TARGET_DIR=$HOME/.cache/cargo
+# export CARGO_TARGET_DIR=$HOME/.cache/cargo
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 export EDITOR=nvim
@@ -153,3 +153,13 @@ function record-webcam() {
 function duration() {
 	ffprobe -v error -select_streams v:0 -show_entries stream=duration -of default=noprint_wrappers=1:nokey=1 "file:$1"
 }
+
+# >>> kache test runner >>>
+[ -n "${CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER-}" ] || CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER='kache test-runner'; export CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER
+# <<< kache test runner <<<
+# >>> kache compiler cache >>>
+case "$PATH" in
+    '/home/sermuns/.local/lib/kache/shims'|'/home/sermuns/.local/lib/kache/shims':*) ;;
+    *) export PATH='/home/sermuns/.local/lib/kache/shims'${PATH:+:"$PATH"} ;;
+esac
+# <<< kache compiler cache <<<
