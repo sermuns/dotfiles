@@ -36,6 +36,11 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim",
       "version": "2.0.0 - 3.0.0"
     },
+    "hardtime.nvim": {
+      "rev": "721a75b9a0c2eb1fb811d34507708ee315cb04eb",
+      "src": "https://github.com/m4xshen/hardtime.nvim",
+      "version": "1.0.0 - 2.0.0"
+    },
     "mini.nvim": {
       "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
       "src": "https://github.com/nvim-mini/mini.nvim",

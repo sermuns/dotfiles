@@ -1,4 +1,0 @@
-# == Hyperlink ==
-# Attach hyperlink to filenames
-# Possible values: always, auto, never
-hyperlink: auto

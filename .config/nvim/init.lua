@@ -101,6 +101,7 @@ vim.pack.add {
 	{ src = 'https://github.com/sermuns/MEREAD',                    version = range '1' },
 	{ src = 'https://github.com/teamtype/teamtype-nvim' },
 	{ src = 'https://github.com/vxpm/ferris.nvim' },
+	-- { src = 'https://github.com/m4xshen/hardtime.nvim',             version = range '1' },
 
 	-- neo-tree
 	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',       version = range '3' },
@@ -148,6 +149,7 @@ require('todo-comments').setup {}
 require('ferris').setup {}
 require('nvim-highlight-colors').setup {}
 require('fidget').setup {}
+-- require('hardtime').setup()
 
 require('mini.completion').setup {}
 -- do file path completion
