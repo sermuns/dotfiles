@@ -1,8 +1,8 @@
-[build]
-rustdoc = "/home/sermuns/.local/lib/kache/shims/rustdoc"
-rustc-wrapper = "kache"
-
-[env]
-HOST_CC = "kache cc"
-HOST_CXX = "kache c++"
-CC_KNOWN_WRAPPER_CUSTOM = "kache"
+# [build]
+# rustdoc = "/home/sermuns/.local/lib/kache/shims/rustdoc"
+# rustc-wrapper = "kache"
+#
+# [env]
+# HOST_CC = "kache cc"
+# HOST_CXX = "kache c++"
+# CC_KNOWN_WRAPPER_CUSTOM = "kache"
