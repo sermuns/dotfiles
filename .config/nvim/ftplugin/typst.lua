@@ -5,6 +5,12 @@ require('typst-preview').setup {
 	},
 }
 
+vim.lsp.config["tinymist"] = {
+	settings = {
+		formatterMode = "typstyle",
+	}
+}
+
 vim.keymap.set(
 	'n',
 	'<F10>',
