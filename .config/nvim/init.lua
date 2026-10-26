@@ -139,6 +139,7 @@ vim.lsp.enable {
 	'ts_ls',
 	'verible',
 	'yamlls',
+	'wgsl_analyzer',
 }
 
 require('gitlinker').setup {}
