@@ -1,4 +1,4 @@
 [Thumbnailer Entry]
 TryExec=/usr/bin/ffmpeg
-Exec=/usr/bin/ffmpeg -y -loglevel error -i %i -filter_complex "showwavespic=s=%sx%s:colors=#3584e4" -frames:v 1 %o
+Exec=/usr/bin/ffmpeg -y -loglevel error -i %i -filter_complex "[0:a]showwavespic=s=%sx%s:colors=#ff7800[wave];color=c=#1d1d20:s=%sx%s[bg];[bg][wave]overlay=shortest=1:format=rgb,format=rgb24" -frames:v 1 %o
 MimeType=audio/mpeg;audio/mp4;audio/x-m4a;audio/flac;audio/ogg;audio/x-vorbis+ogg;audio/opus;audio/x-opus+ogg;audio/vnd.wave;audio/x-wav;audio/aac;audio/x-aac;audio/ac3;audio/x-matroska;audio/webm

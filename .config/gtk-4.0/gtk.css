@@ -1,0 +1,7 @@
+/* Nautilus paints a white/grey transparency checkerboard behind thumbnails.
+   It shows through the 2px rounded corners of opaque thumbnails. Use the
+   content-view background instead, so corners blend with the dark theme. */
+.nautilus-image.file-thumbnail {
+  background-image: none;
+  background-color: var(--view-bg-color, #1d1d20);
+}
