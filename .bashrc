@@ -81,7 +81,7 @@ alias tree='eza --tree'
 alias v=nvim
 alias vim='nvim'
 alias yt-dlp='yt-dlp --no-warnings'
-alias zathura='zathura --fork'
+alias zathura='GSK_RENDERER=gl zathura --fork'
 alias cr='cargo run'
 alias cb='cargo build'
 
