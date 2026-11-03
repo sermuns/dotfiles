@@ -1,2 +1,3 @@
 [cache]
+auto_recover_targets = true
 preserve_incremental = true
