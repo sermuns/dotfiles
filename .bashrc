@@ -85,6 +85,7 @@ alias zathura='GSK_RENDERER=gl zathura --fork'
 alias cr='cargo run'
 alias cb='cargo build'
 alias opencode='env -u GITHUB_TOKEN opencode'
+alias R='R --quiet'
 
 yt-album() {
 	yt-dlp "$@" --no-warnings --split-chapters -x -o "chapter:$HOME/Music/%(title)s/[%(section_number)02d] %(section_title)s.%(ext)s" --exec rm
