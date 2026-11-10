@@ -81,6 +81,12 @@ animations {
 
 }
 window-rule {
+    match app-id="^(zoom|us.zoom.Zoom)$"
+    exclude title="^Zoom Workplace - "
+    exclude title="^Meeting$"
+    open-floating true
+}
+window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
