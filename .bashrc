@@ -31,6 +31,7 @@ path=(
 	"$HOME/.local/bin"
 	"$HOME/.cargo/bin"
 	"$HOME/.cargo/binstall"
+	"$HOME/.dotnet/tools"
 	"$BUN_INSTALL/bin"
 	"$PATH"
 )
