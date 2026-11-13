@@ -140,6 +140,8 @@ vim.lsp.enable {
 	'verible',
 	'yamlls',
 	'wgsl_analyzer',
+	'r_language_server',
+	'air',
 }
 
 require('gitlinker').setup {}
