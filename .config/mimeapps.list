@@ -29,6 +29,7 @@ application/x-extension-xht=floorp-85aca4d2-8887-4e31-879e-7d407d879cb1.desktop
 video/matroska=mpv.desktop
 x-scheme-handler/jetbrains=jetbrainsd.desktop
 video/webm=mpv.desktop
+x-scheme-handler/unityhub=unityhub.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
@@ -47,3 +48,4 @@ application/x-extension-xhtml=userapp-Floorp-TH3SB3.desktop;floorp-85aca4d2-8887
 application/x-extension-xht=userapp-Floorp-TH3SB3.desktop;floorp-85aca4d2-8887-4e31-879e-7d407d879cb1.desktop;
 video/matroska=mpv.desktop;
 video/webm=mpv.desktop;
+x-scheme-handler/unityhub=unityhub.desktop;
