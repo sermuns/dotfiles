@@ -1,5 +1,4 @@
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
-[ "$(tty)" == "/dev/tty1" ] && exec niri-session -l 2>/dev/null
 # >>> kache test runner >>>
 [ -n "${CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER-}" ] || CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER='kache test-runner'; export CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER
 # <<< kache test runner <<<
@@ -14,3 +13,5 @@ case "$PATH" in
     *) export PATH='/home/sermuns/.local/lib/kache/shims'${PATH:+:"$PATH"} ;;
 esac
 # <<< kache compiler cache <<<
+
+# [ "$(tty)" == "/dev/tty1" ] && exec niri-session -l 2>/dev/null
