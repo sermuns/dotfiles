@@ -45,6 +45,7 @@
 
 [core]
     pager = ~/.cargo/bin/delta
+	whitespace = cr-at-eol
 
 [interactive]
     diffFilter = ~/.cargo/bin/delta --color-only
