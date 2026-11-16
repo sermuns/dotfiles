@@ -142,6 +142,7 @@ vim.lsp.enable {
 	'wgsl_analyzer',
 	'r_language_server',
 	'air',
+	'roslyn_ls',
 }
 
 require('gitlinker').setup {}
