@@ -82,28 +82,42 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 	end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		local filetype = vim.bo.filetype
+		if filetype and filetype ~= "" then
+			pcall(vim.treesitter.start)
+		end
+	end,
+})
+
 local range = vim.version.range
 vim.pack.add {
 	{ src = 'https://github.com/brenoprata10/nvim-highlight-colors' },
-	{ src = 'https://github.com/chomosuke/typst-preview.nvim',      version = range '1' },
+	{ src = 'https://github.com/chomosuke/typst-preview.nvim',                version = range '1' },
 	{ src = 'https://github.com/chrisbra/csv.vim' },
-	{ src = 'https://github.com/folke/todo-comments.nvim',          version = range '1' },
-	{ src = 'https://github.com/folke/tokyonight.nvim',             version = range '4' },
-	{ src = 'https://github.com/j-hui/fidget.nvim',                 version = range '2' },
-	{ src = 'https://github.com/lewis6991/gitsigns.nvim',           version = range '2' },
-	{ src = 'https://github.com/linrongbin16/gitlinker.nvim',       version = range('5') },
-	{ src = 'https://github.com/neovim/nvim-lspconfig',             version = range '2' },
-	{ src = 'https://github.com/nvim-mini/mini.nvim',               version = 'stable' },
+	{ src = 'https://github.com/folke/todo-comments.nvim',                    version = range '1' },
+	{ src = 'https://github.com/folke/tokyonight.nvim',                       version = range '4' },
+	{ src = 'https://github.com/j-hui/fidget.nvim',                           version = range '2' },
+	{ src = 'https://github.com/lewis6991/gitsigns.nvim',                     version = range '2' },
+	{ src = 'https://github.com/linrongbin16/gitlinker.nvim',                 version = range('5') },
+	{ src = 'https://github.com/neovim/nvim-lspconfig',                       version = range '2' },
+	{ src = 'https://github.com/nvim-mini/mini.nvim',                         version = 'stable' },
 	{ src = 'https://github.com/nvim-tree/nvim-web-devicons' },
 	{ src = 'https://github.com/rodjek/vim-puppet' },
 	{ src = 'https://github.com/ron-rs/ron.vim' },
 	{ src = 'https://github.com/saecki/crates.nvim' },
-	{ src = 'https://github.com/sermuns/MEREAD',                    version = range '1' },
+	{ src = 'https://github.com/sermuns/MEREAD',                              version = range '1' },
 	{ src = 'https://github.com/teamtype/teamtype-nvim' },
 	{ src = 'https://github.com/vxpm/ferris.nvim' },
 
+	-- treesitter
+	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter',             version = 'main', },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = 'main', },
+
 	-- neo-tree
-	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',       version = range '3' },
+	{ src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',                 version = range '3' },
 	{ src = 'https://github.com/nvim-lua/plenary.nvim' },
 	{ src = 'https://github.com/MunifTanjim/nui.nvim' },
 
@@ -152,6 +166,7 @@ require('todo-comments').setup {}
 require('ferris').setup {}
 require('nvim-highlight-colors').setup {}
 require('fidget').setup {}
+require('nvim-treesitter').setup {}
 
 require('mini.completion').setup {}
 -- do file path completion

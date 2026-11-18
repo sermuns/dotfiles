@@ -27,7 +27,7 @@
       "version": "2.0.0 - 3.0.0"
     },
     "gitlinker.nvim": {
-      "rev": "b710fe0e0c997236104f43db49905ab67f8d1f64",
+      "rev": "34b6b88d08fc7520c56e99dc6258ad5a8229dc63",
       "src": "https://github.com/linrongbin16/gitlinker.nvim",
       "version": "5.0.0 - 6.0.0"
     },
@@ -52,7 +52,7 @@
       "version": "3.0.0 - 4.0.0"
     },
     "neogit": {
-      "rev": "697ad3ee86a73cf6b6758b838d7a7d76cf3b9f86",
+      "rev": "17929b7b0b9c05fe3dfc788fbba9881eb9c1cbec",
       "src": "https://github.com/NeogitOrg/neogit"
     },
     "nui.nvim": {
@@ -68,8 +68,18 @@
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": "2.0.0 - 3.0.0"
     },
+    "nvim-treesitter": {
+      "rev": "b706d642dd20d0922e7e92365dc73617f0fdb4ea",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-treesitter-textobjects": {
+      "rev": "5c7b0263797dfd1bd6202f2b219f3b53a80b2187",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "version": "'main'"
+    },
     "nvim-web-devicons": {
-      "rev": "ec309a0eaff6ea967e58c275996155ab5c16938d",
+      "rev": "0dc0cfb0c6858041174a53c7aa4adaf65e994b3c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "plenary.nvim": {
