@@ -80,6 +80,7 @@ animations {
     slowdown 0.3
 
 }
+
 window-rule {
     match app-id="^(zoom|us.zoom.Zoom)$"
     exclude title="^Zoom Workplace - "
@@ -112,6 +113,7 @@ window-rule {
 	open-focused true
 	open-fullscreen true
 }
+
 binds {
     Mod+Shift+Slash {
         show-hotkey-overlay
