@@ -89,6 +89,7 @@ alias opencode='env -u GITHUB_TOKEN opencode'
 alias R='R --quiet --no-save'
 alias spp='cargo run -rm ~/Git/spp/Cargo.toml --'
 alias cs='cargo +nightly -Zscript'
+alias splatpipe='.pixi/envs/default/bin/python -m splatpipe'
 
 yt-album() {
 	yt-dlp "$@" --no-warnings --split-chapters -x -o "chapter:$HOME/Music/%(title)s/[%(section_number)02d] %(section_title)s.%(ext)s" --exec rm
